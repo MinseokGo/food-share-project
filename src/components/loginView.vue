@@ -9,7 +9,7 @@
     <div class="login_lock_icon_130_35"></div>
     <span class="login_password_txt_130_36">PASSWORD</span>
     <div class="login_id_icon_152_17"></div>
-    <div class="login____icon_152_19"></div>
+    <div class="login_main_icon_152_19"></div>
   </div>
 </template>
 
@@ -131,7 +131,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.login____icon_152_19 {
+.login_main_icon_152_19 {
   width: 178px;
   height: 178px;
   position: absolute;
