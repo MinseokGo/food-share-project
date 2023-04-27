@@ -15,6 +15,8 @@
 
 <style scoped>
 .login_130_22 {
+  left: 50%;
+  transform: translate(-50%, 0);
   overflow: hidden;
 }
 .login_130_22 {
