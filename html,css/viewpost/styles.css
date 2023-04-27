@@ -1,11 +1,13 @@
-.128_163 { 
-	overflow:hidden;
-}.viewpost_128_163 { 
+.viewpost_128_163 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:484px;
 	height:844px;
 	position:absolute;
-}.viewpost_posttitle_txt_128_175 { 
+	overflow: hidden;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.viewpost_posttitle_txt_128_175 { 
 	color:rgba(0, 0, 0, 1);
 	width:437px;
 	height:36px;
@@ -17,7 +19,8 @@
 	font-size:26px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_joinshare_box_btn_128_224 { 
+}
+.viewpost_joinshare_box_btn_128_224 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(255, 234.89746749401093, 163.62499594688416, 1);
 	width:178px;
@@ -29,7 +32,8 @@
 	border-top-right-radius:20px;
 	border-bottom-left-radius:20px;
 	border-bottom-right-radius:20px;
-}.viewpost_joinshare_txt_128_225 { 
+}
+.viewpost_joinshare_txt_128_225 { 
 	color:rgba(0, 0, 0, 1);
 	width:116px;
 	height:20px;
@@ -41,34 +45,35 @@
 	font-size:30px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_first_line_130_178 { 
+}
+.viewpost_first_line_130_178 { 
 	transform: rotate(0.27026110800433234deg);
 	width:424.0047302246094px;
 	height:0px;
 	position:absolute;
 	left:34px;
 	top:188px;
-}.130_178 { 
 	border:1px solid rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
-}.viewpost_third_line_130_179 { 
+}
+.viewpost_third_line_130_179 { 
 	transform: rotate(0.27026110800433234deg);
 	width:424.0047302246094px;
 	height:0px;
 	position:absolute;
 	left:34px;
 	top:563px;
-}.130_179 { 
 	border:1px solid rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
-}.viewpost_second_line_130_192 { 
+}
+.viewpost_second_line_130_192 { 
 	transform: rotate(0.27026110800433234deg);
 	width:424.0047302246094px;
 	height:0px;
 	position:absolute;
 	left:34px;
 	top:399px;
-}.130_192 { 
 	border:1px solid rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
-}.viewpost_selectmenu_txt_130_180 { 
+}
+.viewpost_selectmenu_txt_130_180 { 
 	color:rgba(0, 0, 0, 1);
 	width:124px;
 	height:24px;
@@ -80,7 +85,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_delivfee_txt_130_190 { 
+}
+.viewpost_delivfee_txt_130_190 { 
 	color:rgba(0, 0, 0, 1);
 	width:73px;
 	height:24px;
@@ -92,7 +98,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_delivfeenum_txt_130_191 { 
+}
+.viewpost_delivfeenum_txt_130_191 { 
 	color:rgba(0, 0, 0, 1);
 	width:73px;
 	height:24px;
@@ -104,7 +111,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_selectshop_txt_130_189 { 
+}
+.viewpost_selectshop_txt_130_189 { 
 	color:rgba(0, 0, 0, 1);
 	width:169px;
 	height:24px;
@@ -116,7 +124,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_selecttime_txt_130_181 { 
+}
+.viewpost_selecttime_txt_130_181 { 
 	color:rgba(0, 0, 0, 1);
 	width:124px;
 	height:24px;
@@ -128,7 +137,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_selectloc_txt_130_182 { 
+}
+.viewpost_selectloc_txt_130_182 { 
 	color:rgba(0, 0, 0, 1);
 	width:124px;
 	height:24px;
@@ -140,7 +150,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_sharemenu_txt_130_183 { 
+}
+.viewpost_sharemenu_txt_130_183 { 
 	color:rgba(0, 0, 0, 1);
 	width:88px;
 	height:25px;
@@ -152,7 +163,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_shopinfo_txt_130_188 { 
+}
+.viewpost_shopinfo_txt_130_188 { 
 	color:rgba(0, 0, 0, 1);
 	width:88px;
 	height:25px;
@@ -164,7 +176,8 @@
 	font-size:18px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_shareloc_txt_130_184 { 
+}
+.viewpost_shareloc_txt_130_184 { 
 	color:rgba(0, 0, 0, 1);
 	width:88px;
 	height:25px;
@@ -176,7 +189,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_sharepeoplenum_txt_130_186 { 
+}
+.viewpost_sharepeoplenum_txt_130_186 { 
 	color:rgba(0, 0, 0, 1);
 	width:124px;
 	height:24px;
@@ -188,7 +202,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_shareloc_txt_130_187 { 
+}
+.viewpost_shareloc_txt_130_187 { 
 	color:rgba(0, 0, 0, 1);
 	width:88px;
 	height:25px;
@@ -200,7 +215,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_sharetime_txt_130_185 { 
+}
+.viewpost_sharetime_txt_130_185 { 
 	color:rgba(0, 0, 0, 1);
 	width:88px;
 	height:25px;
@@ -212,7 +228,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_shop_icon_128_210 { 
+}
+.viewpost_shop_icon_128_210 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	width:84px;
 	height:84px;
@@ -226,7 +243,8 @@
 	background-image:url(images/viewpost_shop_icon.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.viewpost_postcontent_txt_130_193 { 
+}
+.viewpost_postcontent_txt_130_193 { 
 	color:rgba(0, 0, 0, 1);
 	width:398px;
 	height:174px;
@@ -238,7 +256,8 @@
 	font-size:18px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_navbar_box_138_4 { 
+}
+.viewpost_navbar_box_138_4 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(255, 234.89746749401093, 163.62499594688416, 1);
 	width:484px;
@@ -247,7 +266,8 @@
 	left:0px;
 	top:0px;
 	border-radius:Symbol(figma.mixed)px;
-}.viewpost_home_txt_138_5 { 
+}
+.viewpost_home_txt_138_5 { 
 	color:rgba(0, 0, 0, 1);
 	width:14px;
 	height:16px;
@@ -259,7 +279,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_chat_txt_138_6 { 
+}
+.viewpost_chat_txt_138_6 { 
 	color:rgba(0, 0, 0, 1);
 	width:33px;
 	height:16px;
@@ -271,7 +292,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_userinfo_txt_138_7 { 
+}
+.viewpost_userinfo_txt_138_7 { 
 	color:rgba(0, 0, 0, 1);
 	width:50px;
 	height:16px;
@@ -283,7 +305,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.viewpost_home_icon_btn_138_8 { 
+}
+.viewpost_home_icon_btn_138_8 { 
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -292,7 +315,8 @@
 	background-image:url(images/viewpost_home_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.viewpost_chat_icon_btn_138_9 { 
+}
+.viewpost_chat_icon_btn_138_9 { 
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -301,7 +325,8 @@
 	background-image:url(images/viewpost_chat_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.viewpost_userinfo_icon_btn_138_10 { 
+}
+.viewpost_userinfo_icon_btn_138_10 { 
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -310,4 +335,4 @@
 	background-image:url(images/viewpost_userinfo_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}
+}

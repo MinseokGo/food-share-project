@@ -1,11 +1,13 @@
-.128_89 { 
-	overflow:hidden;
-}.home_128_89 { 
+.home_128_89 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:484px;
 	height:844px;
 	position:absolute;
-}.home_writepost_icon_btn_128_96 { 
+	overflow:hidden;
+	left: 50%;
+	transform:translate(-50%, 0);
+}
+.home_writepost_icon_btn_128_96 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	width:40px;
 	height:40px;
@@ -15,7 +17,8 @@
 	background-image:url(images/home_writepost_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.home_loc_txt_128_97 { 
+}
+.home_loc_txt_128_97 { 
 	color:rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
 	width:293px;
 	height:20px;
@@ -27,7 +30,8 @@
 	font-size:15px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.home_addloc_icon_btn_128_111 { 
+}
+.home_addloc_icon_btn_128_111 { 
 	width:18px;
 	height:18px;
 	position:absolute;
@@ -36,7 +40,8 @@
 	background-image:url(images/home_addloc_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.home_navbar_box_128_112 { 
+}
+.home_navbar_box_128_112 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(255, 234.89746749401093, 163.62499594688416, 1);
 	width:484px;
@@ -45,7 +50,8 @@
 	left:0px;
 	top:0px;
 	border-radius:Symbol(figma.mixed)px;
-}.home_home_txt_128_113 { 
+}
+.home_home_txt_128_113 { 
 	color:rgba(0, 0, 0, 1);
 	width:14px;
 	height:16px;
@@ -57,7 +63,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.home_chat_txt_128_114 { 
+}
+.home_chat_txt_128_114 { 
 	color:rgba(0, 0, 0, 1);
 	width:33px;
 	height:16px;
@@ -69,7 +76,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.home_useinfo_txt_128_115 { 
+}
+.home_useinfo_txt_128_115 { 
 	color:rgba(0, 0, 0, 1);
 	width:50px;
 	height:16px;
@@ -81,7 +89,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.home_home_icon_btn_128_116 { 
+}
+.home_home_icon_btn_128_116 { 
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -90,7 +99,8 @@
 	background-image:url(images/home_home_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.home_chat_icon_btn_128_117 { 
+}
+.home_chat_icon_btn_128_117 { 
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -99,7 +109,8 @@
 	background-image:url(images/home_chat_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.home_userinfo_icon_btn_128_118 { 
+}
+.home_userinfo_icon_btn_128_118 { 
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -108,4 +119,4 @@
 	background-image:url(images/home_userinfo_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}
+}

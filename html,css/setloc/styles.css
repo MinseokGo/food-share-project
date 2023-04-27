@@ -1,11 +1,13 @@
-.128_120 { 
-	overflow:hidden;
-}.setloc_128_120 { 
+.setloc_128_120 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:484px;
 	height:844px;
 	position:absolute;
-}.setloc_setpostcode_txt_btn_152_5 { 
+	overflow: hidden;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.setloc_setpostcode_txt_btn_152_5 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(255, 234.89746749401093, 163.62499594688416, 1);
 	width:419px;
@@ -17,7 +19,8 @@
 	border-top-right-radius:5px;
 	border-bottom-left-radius:5px;
 	border-bottom-right-radius:5px;
-}.setloc_setloc_box_btn_152_15 { 
+}
+.setloc_setloc_box_btn_152_15 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(255, 234.89746749401093, 163.62499594688416, 1);
 	width:419px;
@@ -29,7 +32,8 @@
 	border-top-right-radius:5px;
 	border-bottom-left-radius:5px;
 	border-bottom-right-radius:5px;
-}.setloc_setpostcode_txt_152_6 { 
+}
+.setloc_setpostcode_txt_152_6 { 
 	color:rgba(0, 0, 0, 1);
 	width:143px;
 	height:20px;
@@ -41,7 +45,8 @@
 	font-size:24px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.setloc_setloc_txt_152_16 { 
+}
+.setloc_setloc_txt_152_16 { 
 	color:rgba(0, 0, 0, 1);
 	width:137px;
 	height:20px;
@@ -53,14 +58,16 @@
 	font-size:24px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.setloc_postcodeaddress_txt_inp_152_3 { 
+}
+.setloc_postcodeaddress_txt_inp_152_3 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:419px;
 	height:63px;
 	position:absolute;
 	left:32px;
 	top:33px;
-}.setloc_postcodeaddress_txt_placeholder_152_4 { 
+}
+.setloc_postcodeaddress_txt_placeholder_152_4 { 
 	color:rgba(176.37499898672104, 176.37499898672104, 176.37499898672104, 1);
 	width:87px;
 	height:20px;
@@ -72,14 +79,16 @@
 	font-size:24px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.setloc_roadaddress_txt_inp_152_7 { 
+}
+.setloc_roadaddress_txt_inp_152_7 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:419px;
 	height:63px;
 	position:absolute;
 	left:32px;
 	top:228px;
-}.setloc_roadaddress_txt_placeholder_152_8 { 
+}
+.setloc_roadaddress_txt_placeholder_152_8 { 
 	color:rgba(176.37499898672104, 176.37499898672104, 176.37499898672104, 1);
 	width:109px;
 	height:20px;
@@ -91,14 +100,16 @@
 	font-size:24px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.setloc_jibunaddress_txt_inp_152_9 { 
+}
+.setloc_jibunaddress_txt_inp_152_9 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:419px;
 	height:63px;
 	position:absolute;
 	left:32px;
 	top:336px;
-}.setloc_jibunaddress_txt_placeholder_152_10 { 
+}
+.setloc_jibunaddress_txt_placeholder_152_10 { 
 	color:rgba(176.37499898672104, 176.37499898672104, 176.37499898672104, 1);
 	width:87px;
 	height:20px;
@@ -110,21 +121,24 @@
 	font-size:24px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.setloc_detailaddress_txt_inp_152_11 { 
+}
+.setloc_detailaddress_txt_inp_152_11 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:419px;
 	height:63px;
 	position:absolute;
 	left:32px;
 	top:444px;
-}.setloc_extraaddress_txt_inp_152_13 { 
+}
+.setloc_extraaddress_txt_inp_152_13 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:419px;
 	height:63px;
 	position:absolute;
 	left:32px;
 	top:552px;
-}.setloc_detailaddress_txt_placeholder_152_12 { 
+}
+.setloc_detailaddress_txt_placeholder_152_12 { 
 	color:rgba(176.37499898672104, 176.37499898672104, 176.37499898672104, 1);
 	width:87px;
 	height:20px;
@@ -136,7 +150,8 @@
 	font-size:24px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.setloc_extraaddress_txt_placeholder_152_14 { 
+}
+.setloc_extraaddress_txt_placeholder_152_14 { 
 	color:rgba(176.37499898672104, 176.37499898672104, 176.37499898672104, 1);
 	width:87px;
 	height:20px;
@@ -148,4 +163,4 @@
 	font-size:24px;
 	letter-spacing:-0.5;
 	line-height:px;
-}
+}

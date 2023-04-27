@@ -1,11 +1,13 @@
-.130_43 { 
-	overflow:hidden;
-}.writepost_130_43 { 
+.writepost_130_43 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:484px;
 	height:844px;
 	position:absolute;
-}.writepost_loc_txt_130_129 { 
+	overflow: hidden;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.writepost_loc_txt_130_129 { 
 	color:rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
 	width:293px;
 	height:20px;
@@ -17,7 +19,8 @@
 	font-size:15px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_addloc_icon_btn_130_130 { 
+}
+.writepost_addloc_icon_btn_130_130 { 
 	width:18px;
 	height:18px;
 	position:absolute;
@@ -26,7 +29,8 @@
 	background-image:url(images/writepost_addloc_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.writepost_navbar_box_130_131 { 
+}
+.writepost_navbar_box_130_131 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(255, 234.89746749401093, 163.62499594688416, 1);
 	width:484px;
@@ -35,7 +39,8 @@
 	left:0px;
 	top:0px;
 	border-radius:Symbol(figma.mixed)px;
-}.writepost_home_txt_130_132 { 
+}
+.writepost_home_txt_130_132 { 
 	color:rgba(0, 0, 0, 1);
 	width:14px;
 	height:16px;
@@ -47,7 +52,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_chat_txt_130_133 { 
+}
+.writepost_chat_txt_130_133 { 
 	color:rgba(0, 0, 0, 1);
 	width:33px;
 	height:16px;
@@ -59,7 +65,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_userinfo_txt_130_134 { 
+}
+.writepost_userinfo_txt_130_134 { 
 	color:rgba(0, 0, 0, 1);
 	width:50px;
 	height:16px;
@@ -71,7 +78,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_home_icon_btn_130_135 { 
+}
+.writepost_home_icon_btn_130_135 { 
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -80,7 +88,8 @@
 	background-image:url(images/writepost_home_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.writepost_chat_icon_btn_130_136 { 
+}
+.writepost_chat_icon_btn_130_136 { 
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -89,7 +98,8 @@
 	background-image:url(images/writepost_chat_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.writepost_userinfo_icon_btn_130_137 { 
+}
+.writepost_userinfo_icon_btn_130_137 { 
 	width:30px;
 	height:30px;
 	position:absolute;
@@ -98,7 +108,8 @@
 	background-image:url(images/writepost_userinfo_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
-}.writepost_posttitle_txt_inp_130_138 { 
+}
+.writepost_posttitle_txt_inp_130_138 { 
 	color:rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
 	width:219px;
 	height:25px;
@@ -110,7 +121,8 @@
 	font-size:20px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_postcontent_txt_inp_130_140 { 
+}
+.writepost_postcontent_txt_inp_130_140 { 
 	color:rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
 	width:219px;
 	height:25px;
@@ -122,25 +134,26 @@
 	font-size:20px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_first_line_130_139 { 
+}
+.writepost_first_line_130_139 { 
 	transform: rotate(0.27026110800433234deg);
 	width:424.0047302246094px;
 	height:0px;
 	position:absolute;
 	left:28px;
 	top:181px;
-}.130_139 { 
 	border:1px solid rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
-}.writepost_second_line_130_141 { 
+}
+.writepost_second_line_130_141 { 
 	transform: rotate(0.27026110800433234deg);
 	width:424.0047302246094px;
 	height:0px;
 	position:absolute;
 	left:30px;
 	top:512px;
-}.130_141 { 
 	border:1px solid rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
-}.writepost_selectmenu_txt_btn_130_142 { 
+}
+.writepost_selectmenu_txt_btn_130_142 { 
 	color:rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
 	width:124px;
 	height:24px;
@@ -152,7 +165,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_selecttime_txt_btn_130_153 { 
+}
+.writepost_selecttime_txt_btn_130_153 { 
 	color:rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
 	width:124px;
 	height:24px;
@@ -164,7 +178,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_selectloc_txt_btn_130_154 { 
+}
+.writepost_selectloc_txt_btn_130_154 { 
 	color:rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
 	width:124px;
 	height:24px;
@@ -176,7 +191,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_writepost_box_btn_130_148 { 
+}
+.writepost_writepost_box_btn_130_148 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(255, 234.89746749401093, 163.62499594688416, 1);
 	width:178px;
@@ -188,7 +204,8 @@
 	border-top-right-radius:20px;
 	border-bottom-left-radius:20px;
 	border-bottom-right-radius:20px;
-}.writepost_writepost_txt_130_149 { 
+}
+.writepost_writepost_txt_130_149 { 
 	color:rgba(0, 0, 0, 1);
 	width:178px;
 	height:14.170212745666504px;
@@ -200,7 +217,8 @@
 	font-size:30px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_sharemenu_txt_130_158 { 
+}
+.writepost_sharemenu_txt_130_158 { 
 	color:rgba(0, 0, 0, 1);
 	width:88px;
 	height:25px;
@@ -212,7 +230,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_sharepeoplenum_txt_130_159 { 
+}
+.writepost_sharepeoplenum_txt_130_159 { 
 	color:rgba(0, 0, 0, 1);
 	width:134px;
 	height:25px;
@@ -224,7 +243,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_shareloc_txt_130_157 { 
+}
+.writepost_shareloc_txt_130_157 { 
 	color:rgba(0, 0, 0, 1);
 	width:88px;
 	height:25px;
@@ -236,7 +256,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_sharetime_txt_130_156 { 
+}
+.writepost_sharetime_txt_130_156 { 
 	color:rgba(0, 0, 0, 1);
 	width:88px;
 	height:25px;
@@ -248,7 +269,8 @@
 	font-size:16px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_2people_box_btn_130_160 { 
+}
+.writepost_2people_box_btn_130_160 { 
 	background-color:rgba(255, 255, 255, 1);
 	opacity:0.20000000298023224;
 	width:92px;
@@ -256,9 +278,9 @@
 	position:absolute;
 	left:39px;
 	top:683px;
-}.130_160 { 
 	border:1px solid rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
-}.writepost_2people_txt_130_161 { 
+}
+.writepost_2people_txt_130_161 { 
 	color:rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
 	width:41px;
 	height:20px;
@@ -270,7 +292,8 @@
 	font-size:15px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_3people_box_btn_130_163 { 
+}
+.writepost_3people_box_btn_130_163 { 
 	background-color:rgba(255, 255, 255, 1);
 	opacity:0.20000000298023224;
 	width:90px;
@@ -278,9 +301,9 @@
 	position:absolute;
 	left:131px;
 	top:683px;
-}.130_163 { 
 	border:1px solid rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
-}.writepost_3people_txt_130_165 { 
+}
+.writepost_3people_txt_130_165 { 
 	color:rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
 	width:42px;
 	height:20px;
@@ -292,7 +315,8 @@
 	font-size:15px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_4people_box_btn_130_166 { 
+}
+.writepost_4people_box_btn_130_166 { 
 	background-color:rgba(255, 255, 255, 1);
 	opacity:0.20000000298023224;
 	width:92px;
@@ -300,9 +324,9 @@
 	position:absolute;
 	left:221px;
 	top:683px;
-}.130_166 { 
 	border:1px solid rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
-}.writepost_4people_txt_130_168 { 
+}
+.writepost_4people_txt_130_168 { 
 	color:rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
 	width:42px;
 	height:20px;
@@ -314,7 +338,8 @@
 	font-size:15px;
 	letter-spacing:-0.5;
 	line-height:px;
-}.writepost_5people_box_btn_130_169 { 
+}
+.writepost_5people_box_btn_130_169 { 
 	background-color:rgba(255, 255, 255, 1);
 	opacity:0.20000000298023224;
 	width:91px;
@@ -322,9 +347,9 @@
 	position:absolute;
 	left:313px;
 	top:683px;
-}.130_169 { 
 	border:1px solid rgba(154.0625050663948, 154.0625050663948, 154.0625050663948, 1);
-}.writepost_5people_txt_130_171 { 
+}
+.writepost_5people_txt_130_171 { 
 	color:rgba(208.24999898672104, 208.24999898672104, 208.24999898672104, 1);
 	width:86px;
 	height:20px;
@@ -336,4 +361,4 @@
 	font-size:15px;
 	letter-spacing:-0.5;
 	line-height:px;
-}
+}
