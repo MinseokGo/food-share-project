@@ -15,13 +15,13 @@
 
 <style scoped>
 .login_130_22 { 
-	overflow:hidden;
-}
-.login_130_22 { 
 	background-color:rgba(255, 255, 255, 1);
 	width:484.0000305175781px;
 	height:844px;
 	position:absolute;
+	overflow: hidden;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 .login_login_btn_130_210 { 
 	background-color:rgba(255, 234.89746749401093, 163.62499594688416, 1);
