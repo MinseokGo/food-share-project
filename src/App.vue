@@ -1,35 +1,27 @@
 <template>
-  <!--img alt="Vue logo" src="./assets/logo.png"-->
-  <!--HelloWorld msg="Welcome to Your Vue.js App"/-->
-  <loginView userId="testid" />
+  <!--loginView userId="testid"/-->
+  <!--chatView userId="testid"/-->
+  <chatListView userId="testid"/>
+  <!--payView userId="testid"/-->
+  <!--writePostViewView userId="testid"/-->
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-import loginView from './components/loginView.vue'
-
-// export default {
-//   name: 'App',
-//   components: {
-//     HelloWorld,
-//   }
-// }
+//import loginView from './components/loginView.vue'
+import chatListView from './components/chatListView.vue'
+//import chatView from './components/chatView.vue'
+//import payView from './components/payView.vue'
+//import writePostView from './components/writePostView.vue'
 
 export default {
   name: 'App',
   components: {
-    loginView
+    //loginView
+    //chatView
+    chatListView
+    //payView
+    //writePostView
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
