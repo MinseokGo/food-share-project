@@ -16,12 +16,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name : "homePageView",
-};
-</script>
-
 <style scoped>
 .home_128_89 { 
     left: 50%;
