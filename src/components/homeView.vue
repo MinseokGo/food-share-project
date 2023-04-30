@@ -15,15 +15,13 @@
 
 <style scoped>
 .home_128_89 { 
-  left: 50%;
-  transform: translate(-50%, 0);
+    left: 50%;
+    transform: translate(-50%, 0);
 	background-color:rgba(255, 255, 255, 1);
 	width:484px;
 	height:844px;
 	position:absolute;
 	overflow:hidden;
-	left: 50%;
-	transform:translate(-50%, 0);
 }
 .home_writepost_icon_btn_128_96 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -32,7 +30,7 @@
 	position:absolute;
 	left:404px;
 	top:776px;
-	background-image:url(images/home_writepost_icon_btn.png);
+	background-image:url(/src/assets/home_writepost_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -67,7 +65,7 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-	border-radius:Symbol(mixed)px;
+	border-radius:15 px;
 }
 .home_home_txt_128_113 { 
 	color:rgba(0, 0, 0, 1);

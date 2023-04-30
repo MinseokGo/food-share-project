@@ -1,6 +1,6 @@
 <template>
   <div class="login_130_22">
-    <div class="login_login_btn_130_210"></div>
+    <div class="login_login_btn_130_210" href="homeView.vue"></div>
     <div class="login_login_box_130_23"></div>
     <span class="login_login_txt_130_24">로그인</span>
     <div class="login_id_box_inp_130_26"></div>

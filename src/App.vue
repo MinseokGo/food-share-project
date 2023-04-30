@@ -1,12 +1,15 @@
 <template>
   <!--img alt="Vue logo" src="./assets/logo.png"-->
   <!--HelloWorld msg="Welcome to Your Vue.js App"/-->
-  <loginView userId="testid" />
+  <!--loginView /-->
+  <homeView />
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-import loginView from './components/loginView.vue'
+// import loginView from './components/loginView.vue'
+import homeView from './components/homeView.vue'
+
 
 // export default {
 //   name: 'App',
@@ -18,7 +21,7 @@ import loginView from './components/loginView.vue'
 export default {
   name: 'App',
   components: {
-    loginView
+    homeView
   }
 }
 </script>
