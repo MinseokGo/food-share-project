@@ -27,6 +27,7 @@ export default {
 };
 </script>
 
+
 <style scoped>
 .login_130_22 {
 	background-color:rgba(255, 255, 255, 1);
