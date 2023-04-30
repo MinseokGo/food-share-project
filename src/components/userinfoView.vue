@@ -1,4 +1,7 @@
 <template>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+
     <div class=userinfo_128_237>
         <div class="userinfo_post_box_btn_142_9"></div>
         <span class="userinfo_info_txt_128_257">admin00님의 정보</span>
@@ -32,8 +35,6 @@
     height: 844px;
     position: absolute;
     overflow: hidden;
-    left: 50%;
-    transform: translate(-50%, 0);
 }
 
 .userinfo_post_box_btn_142_9 {
@@ -139,7 +140,7 @@
     border-top-right-radius: 59.5px;
     border-bottom-left-radius: 59.5px;
     border-bottom-right-radius: 59.5px;
-    background-image: url(src/assets/userinfo_profile_icon.png);
+    background-image: url(/src/assets/userinfo_profile_icon.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -198,7 +199,7 @@
     position: absolute;
     left: 308px;
     top: 88px;
-    background-image: url(src/assets/userinfo_addloc_icon.png);
+    background-image: url(/src/assets/userinfo_addloc_icon.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -211,7 +212,7 @@
     position: absolute;
     left: 0px;
     top: 0px;
-    border-radius: 15 px;
+    border-radius: 15px;
 }
 
 .userinfo_home_txt_138_14 {
@@ -262,7 +263,7 @@
     position: absolute;
     left: 66px;
     top: 14px;
-    background-image: url(src/assets/userinfo_home_icon_btn.png);
+    background-image: url(/src/assets/userinfo_home_icon_btn.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -273,7 +274,7 @@
     position: absolute;
     left: 225px;
     top: 14px;
-    background-image: url(src/assets/userinfo_chat_icon_btn.png);
+    background-image: url(/src/assets/userinfo_chat_icon_btn.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -284,7 +285,7 @@
     position: absolute;
     left: 377px;
     top: 14px;
-    background-image: url(src/assets/userinfo_userinfo_icon_btn.png);
+    background-image: url(/src/assets/userinfo_userinfo_icon_btn.png);
     background-repeat: no-repeat;
     background-size: cover;
 }</style>

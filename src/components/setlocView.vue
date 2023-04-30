@@ -1,4 +1,7 @@
 <template>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+
   <div class=setloc_128_120>
     <div class="setloc_setpostcode_txt_btn_152_5"></div>
     <div class="setloc_setloc_box_btn_152_15"></div>
@@ -26,8 +29,6 @@
   height: 844px;
   position: absolute;
   overflow: hidden;
-  left: 50%;
-  transform: translate(-50%, 0);
 }
 
 .setloc_setpostcode_txt_btn_152_5 {

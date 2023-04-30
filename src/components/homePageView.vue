@@ -1,4 +1,7 @@
 <template>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+
   <div class="home_128_89">
     <div class="home_writepost_icon_btn_128_96"></div>
     <span class="home_loc_txt_128_97">설정된 위치가 없습니다. 위치를 설정하여 주세요.</span>
@@ -65,7 +68,7 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-	border-radius:15 px;
+	border-radius: 15px;
 }
 .home_home_txt_128_113 { 
 	color:rgba(0, 0, 0, 1);

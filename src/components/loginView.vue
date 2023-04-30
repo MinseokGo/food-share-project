@@ -1,4 +1,7 @@
 <template>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+
   <div class="login_130_22">
     <div class="login_login_btn_130_210" href="homeView.vue"></div>
     <div class="login_login_box_130_23"></div>

@@ -1,4 +1,7 @@
 <template>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+
   <div class="viewpost_128_163">
     <span class="viewpost_posttitle_txt_128_175">자메이카 통다리 두 조각씩 먹으실 분~!</span>
     <div class="viewpost_joinshare_box_btn_128_224"></div>
@@ -31,6 +34,7 @@
 </template>
 
 <style scoped>
+
 .viewpost_128_163 {
   left: 50%;
   transform: translate(-50%, 0);
@@ -39,8 +43,6 @@
   height: 844px;
   position: absolute;
   overflow: hidden;
-  left: 50%;
-  transform: translate(-50%, 0);
 }
 
 .viewpost_posttitle_txt_128_175 {
@@ -294,7 +296,7 @@
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  background-image: url(src/assets/viewpost_shop_icon.png);
+  background-image: url(/src/assets/viewpost_shop_icon.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -321,7 +323,7 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  border-radius: 15 px;
+  border-radius: 15px;
 }
 
 .viewpost_home_txt_138_5 {
@@ -372,7 +374,7 @@
   position: absolute;
   left: 66px;
   top: 14px;
-  background-image: url(src/assets/viewpost_home_icon_btn.png);
+  background-image: url(/src/assets/viewpost_home_icon_btn.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -383,7 +385,7 @@
   position: absolute;
   left: 225px;
   top: 14px;
-  background-image: url(src/assets/viewpost_chat_icon_btn.png);
+  background-image: url(/src/assets/viewpost_chat_icon_btn.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -394,7 +396,7 @@
   position: absolute;
   left: 377px;
   top: 14px;
-  background-image: url(src/assets/viewpost_userinfo_icon_btn.png);
+  background-image: url(/src/assets/viewpost_userinfo_icon_btn.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
