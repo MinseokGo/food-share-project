@@ -17,14 +17,14 @@
 </template>
 
 <script>
-// export default {
-//   name : "loginView",
-//   methods: {
-//     login() {
-//       this.$router.push("/HomePageView");
-//     }
-//   },
-// };
+export default {
+  name : "loginView",
+  methods: {
+    login() {
+      this.$router.push("/HomePageView");
+    }
+  },
+};
 </script>
 
 
