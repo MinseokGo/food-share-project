@@ -1,6 +1,9 @@
 <template>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+    rel="stylesheet"
+  />
 
   <div class="login_130_22">
     <div class="login_login_btn_130_210" @click="login()"></div>
@@ -17,26 +20,25 @@
 </template>
 
 <script>
-// export default {
-//   name : "loginView",
-//   methods: {
-//     login() {
-//       this.$router.push("/HomePageView");
-//     }
-//   },
-// };
+export default {
+  name: "LoginView",
+  methods: {
+    login() {
+      this.$router.push("/HomePageView");
+    },
+  },
+};
 </script>
-
 
 <style scoped>
 .login_130_22 {
-	background-color:rgba(255, 255, 255, 1);
-	width:484.0000305175781px;
-	height:844px;
-	position:absolute;
-	overflow: hidden;
-	left: 50%;
-	transform: translate(-50%, 0);
+  background-color: rgba(255, 255, 255, 1);
+  width: 484.0000305175781px;
+  height: 844px;
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .login_login_btn_130_210 {
   background-color: rgba(255, 234.89746749401093, 163.62499594688416, 1);
