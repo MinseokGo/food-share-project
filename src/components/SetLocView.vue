@@ -1,10 +1,13 @@
 <template>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+    rel="stylesheet"
+  />
 
-  <div class=setloc_128_120>
+  <div class="setloc_128_120">
     <div class="setloc_setpostcode_txt_btn_152_5"></div>
-    <div class="setloc_setloc_box_btn_152_15" @click="exitsetloc()"></div>
+    <div class="setloc_setloc_box_btn_152_15" @click="exitSetLoc()"></div>
     <span class="setloc_setpostcode_txt_152_6">우편 번호 찾기</span>
     <span class="setloc_setloc_txt_152_16">위치 추가하기</span>
     <div class="setloc_postcodeaddress_txt_inp_152_3"></div>
@@ -22,11 +25,11 @@
 
 <script>
 export default {
-  name : "setlocView",
+  name: "SetLocView",
   methods: {
-    exitsetloc() {
-      this.$router.push("/Home");
-    }
+    exitSetLoc() {
+      this.$router.push("/HomePageView");
+    },
   },
 };
 </script>
