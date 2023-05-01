@@ -23,10 +23,10 @@
 
 <script>
 export default {
-  name : "chatListView",
+  name : "ChatListView",
   methods: {
     chatList() {
-      this.$router.push("/chatView");
+      this.$router.push("/ChatView");
     }
   }
 }

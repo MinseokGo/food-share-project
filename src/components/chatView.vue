@@ -21,10 +21,10 @@
 </template>
 <script >
 export default {
-  name : "chatView",
+  name : "ChatView",
   methods: {
     pay() {
-      this.$router.push("/payView");
+      this.$router.push("/PayView");
 	}
   }
 }
