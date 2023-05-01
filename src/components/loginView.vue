@@ -23,7 +23,7 @@ export default {
     login() {
       this.$router.push("/Home");
     }
-  }
+  },
 };
 </script>
 

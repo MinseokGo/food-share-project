@@ -4,7 +4,7 @@
 
   <div class=setloc_128_120>
     <div class="setloc_setpostcode_txt_btn_152_5"></div>
-    <div class="setloc_setloc_box_btn_152_15"></div>
+    <div class="setloc_setloc_box_btn_152_15" @click="exitsetloc()"></div>
     <span class="setloc_setpostcode_txt_152_6">우편 번호 찾기</span>
     <span class="setloc_setloc_txt_152_16">위치 추가하기</span>
     <div class="setloc_postcodeaddress_txt_inp_152_3"></div>
@@ -19,6 +19,17 @@
     <span class="setloc_extraaddress_txt_placeholder_152_14">참고항목</span>
   </div>
 </template>
+
+<script>
+export default {
+  name : "setlocView",
+  methods: {
+    exitsetloc() {
+      this.$router.push("/Home");
+    }
+  },
+};
+</script>
 
 <style scoped>
 .setloc_128_120 {

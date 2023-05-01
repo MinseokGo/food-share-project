@@ -5,7 +5,7 @@
   <div class="home_128_89">
     <div class="home_writepost_icon_btn_128_96"></div>
     <span class="home_loc_txt_128_97">설정된 위치가 없습니다. 위치를 설정하여 주세요.</span>
-    <div class="home_addloc_icon_btn_128_111"></div>
+    <div class="home_addloc_icon_btn_128_111" @click="entersetloc()"></div>
     <div class="home_navbar_box_128_112"></div>
     <span class="home_home_txt_128_113">홈</span
     ><span class="home_chat_txt_128_114">채팅</span
@@ -19,6 +19,11 @@
 <script>
 export default {
   name : "homePageView",
+  methods: {
+    entersetloc() {
+      this.$router.push("/Setloc");
+    }
+  },
 };
 </script>
 
