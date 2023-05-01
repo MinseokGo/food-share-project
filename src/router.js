@@ -1,26 +1,26 @@
 import { createRouter, createWebHistory } from "vue-router"
 
-import loginView from "./components/loginView"
-import homePageView from "./components/homePageView"
-import setlocView from "./components/setlocView"
-import userinfoView from "./components/userinfoView"
-import viewpostView from "./components/viewpostView"
-import writepostView from "./components/writepostView"
-import chatView from "./components/chatView"
-import chatListView from "./components/chatListView"
-import payView from "./components/payView"
+import LoginView from "./components/LoginView"
+import HomePageView from "./components/HomePageView"
+import SetLocView from "./components/SetLocView"
+import UserInfoView from "./components/UserInfoView"
+import ViewPostView from "./components/ViewPostView"
+import WritePostView from "./components/WritePostView"
+import ChatView from "./components/ChatView"
+import ChatListView from "./components/ChatListView"
+import PayView from "./components/PayView"
 
 // 라우터 설계
 const routes = [
-        {path: "/", component: loginView},
-        {path: "/homePageView", component: homePageView},
-        {path: "/setlocView", component: setlocView},
-        {path: "/userinfoView", component: userinfoView},
-        {path: "/viewpostView", component: viewpostView},
-        {path: "/writepostView", component: writepostView},
-        {path:"/chatListView", component: chatListView},
-        {path:"/chatView", component: chatView},
-        {path:"/payView", component: payView}
+        {path: "/", component: LoginView},
+        {path: "/HomePageView", component: HomePageView},
+        {path: "/SetLocView", component: SetLocView},
+        {path: "/UserInfoView", component: UserInfoView},
+        {path: "/ViewPostView", component: ViewPostView},
+        {path: "/WritePostView", component: WritePostView},
+        {path:"/ChatView", component: ChatView},
+        {path:"/ChatListView", component: ChatListView},
+        {path:"/PayView", component: PayView}
 ]
 
 const router = createRouter({
