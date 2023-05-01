@@ -22,6 +22,14 @@
 </template>
 
 <script>
+export default {
+  name : "chatListView",
+  methods: {
+    chatList() {
+      this.$router.push("/chatView");
+    }
+  }
+}
 /*import chatView from './chatView.vue'
 import { useRouter } from "vue-router";
 const router = useRouter();

@@ -24,6 +24,13 @@
   </div>
 </template>
 
+<script>
+export default {
+  name : "writePostView",
+}
+</script>
+
+
 <style scoped>
     .writepost_130_43 { 
 	background-color:rgba(255, 255, 255, 1);
