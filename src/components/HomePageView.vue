@@ -6,7 +6,7 @@
   />
 
   <div class="home_128_89">
-    <div class="home_writepost_icon_btn_128_96"></div>
+    <div class="home_writepost_icon_btn_128_96" @click="enterWritePostView()"></div>
     <span class="home_loc_txt_128_97"
       >설정된 위치가 없습니다. 위치를 설정하여 주세요.</span
     >
@@ -36,6 +36,9 @@ export default {
     },
     enterUserInfoView() {
       this.$router.push("/UserInfoView");
+    },
+    enterWritePostView() {
+      this.$router.push("/WritePostView");
     },
   },
 };
