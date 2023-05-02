@@ -10,7 +10,6 @@
     <div class="login_login_box_130_23"></div>
     <span class="login_login_txt_130_24">로그인</span>
     <div class="login_id_box_inp_130_26"></div>
-    <!-- <span class="login_id_txt_130_30">ID</span> -->
     <input
       class="login_id_txt_130_30"
       v-model="userId"
@@ -19,7 +18,6 @@
     />
     <div class="login_password_box_inp_130_33"></div>
     <div class="login_lock_icon_130_35"></div>
-    <!-- <span class="login_password_txt_130_36">PASSWORD</span> -->
     <input
       class="login_password_txt_130_36"
       v-model="userPassword"
