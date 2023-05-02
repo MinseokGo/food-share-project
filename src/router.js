@@ -18,8 +18,8 @@ const routes = [
         {path: "/UserInfoView", component: UserInfoView},
         {path: "/ViewPostView", component: ViewPostView},
         {path: "/WritePostView", component: WritePostView},
-        {path:"/ChatListView", component: ChatListView},
         {path:"/ChatView", component: ChatView},
+        {path:"/ChatListView", component: ChatListView},
         {path:"/PayView", component: PayView}
 ]
 
