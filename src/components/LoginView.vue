@@ -16,6 +16,7 @@
     <span class="login_password_txt_130_36">PASSWORD</span>
     <div class="login_id_icon_152_17"></div>
     <div class="login_main_icon_152_19"></div>
+    <h2>{{ id }}</h2>
   </div>
 </template>
 
@@ -26,6 +27,11 @@ export default {
     login() {
       this.$router.push("/HomePageView");
     },
+  },
+  data() {
+    return {
+      id: "dsa",
+    };
   },
 };
 </script>
