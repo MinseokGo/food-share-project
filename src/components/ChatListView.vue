@@ -13,7 +13,10 @@
     <div class="chatlist_chat_icon_btn_130_258"></div>
     <div class="chatlist_userinfo_icon_btn_130_259"></div>
     <div class="chatlist_first_line_130_260"></div>
-    <div class="chatlist_shop_icon_130_235"></div><button class="chatlist_chattitle_txt_130_232" @click="chatList()"><span>허은진님과의 대화방</span></button>
+    <div class="chatlist_shop_icon_130_235"></div>
+	<button class="chatlist_chattitle_txt_130_232" @click="chatList()">
+		<span>허은진님과의 대화방</span>
+	</button>
 	<span class="chatlist_chatlastmsg_txt_130_233">네, 그렇게 하시죠.</span>
     <div class="chatlist_shareloc_box_130_261"></div><span class="chatlist_shareloc_txt_130_262">장전초 정문</span>
     <div class="chatlist_shopname_box_130_263"></div><span class="chatlist_shopname_txt_130_264">BBQ</span>
