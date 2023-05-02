@@ -139,6 +139,7 @@ export default {
   font-size: 15px;
   letter-spacing: -0.5;
   line-height: px;
+  border: 0;
 }
 .login_password_box_inp_130_33 {
   background-color: rgba(255, 255, 255, 1);
@@ -174,6 +175,7 @@ export default {
   font-size: 15px;
   letter-spacing: -0.5;
   line-height: px;
+  border: 0;
 }
 .login_id_icon_152_17 {
   width: 28px;
