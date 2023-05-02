@@ -7,11 +7,11 @@
 
   <div class="userinfo_128_237">
     <div class="userinfo_post_box_btn_142_9"></div>
-    <span class="userinfo_info_txt_128_257">admin00님의 정보</span>
+    <span class="userinfo_info_txt_128_257">{{ userId }}의 정보</span>
     <span class="userinfo_postlist_txt_130_195">내가 작성한 글</span>
     <span class="userinfo_id_txt_128_259">아이디</span>
-    <span class="userinfo_userid_txt_133_2">아이디</span>
-    <span class="userinfo_usernickname_txt_133_3">닉네임</span>
+    <span class="userinfo_userid_txt_133_2">{{ userId }}</span>
+    <span class="userinfo_usernickname_txt_133_3">{{ userNickname }}</span>
     <span class="userinfo_nickname_txt_128_262">닉네임</span>
     <div class="userinfo_profile_icon_128_422"></div>
     <span class="userinfo_posttitle_txt_btn_130_196"
@@ -49,6 +49,12 @@ export default {
     enterUserInfoView() {
       this.$router.push("/UserInfoView");
     },
+  },
+  date() {
+    return {
+      userId: "rhalstjr1999",
+      userNickname: "GoMin",
+    };
   },
 };
 </script>
@@ -117,7 +123,7 @@ export default {
 
 .userinfo_userid_txt_133_2 {
   color: rgba(0, 0, 0, 1);
-  width: 44px;
+  width: auto;
   height: 20px;
   position: absolute;
   left: 115px;
