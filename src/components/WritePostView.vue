@@ -1,22 +1,25 @@
 <template>
 	<link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
     <div class=writepost_130_43><span class="writepost_loc_txt_130_129">설정된 위치가 없습니다. 위치를 설정하여 주세요.</span>
-    <div class="writepost_addloc_icon_btn_130_130"></div>
+    <div class="writepost_addloc_icon_btn_130_130" @click="enterSetLoc()"></div>
     <div class="writepost_navbar_box_130_131"></div><span class="writepost_home_txt_130_132">홈</span><span
       class="writepost_chat_txt_130_133">채팅</span><span class="writepost_userinfo_txt_130_134">내정보
     </span>
-    <div class="writepost_home_icon_btn_130_135"></div>
-    <div class="writepost_chat_icon_btn_130_136"></div>
-    <div class="writepost_userinfo_icon_btn_130_137"></div><span class="writepost_posttitle_txt_inp_130_138">제목을 입력하여
-      주세요.</span><span class="writepost_postcontent_txt_inp_130_140">내용을 입력하여 주세요.</span>
+    <div class="writepost_home_icon_btn_130_135" @click="enterHome()"></div>
+    <div class="writepost_chat_icon_btn_130_136" @click="chatList()"></div>
+    <div class="writepost_userinfo_icon_btn_130_137" @click="enterUserInfo()"></div>
+	<span class="writepost_posttitle_txt_inp_130_138">제목을 입력하여주세요.</span>
+	<span class="writepost_postcontent_txt_inp_130_140">내용을 입력하여 주세요.</span>
     <div class="writepost_first_line_130_139"></div>
-    <div class="writepost_second_line_130_141"></div><span class="writepost_selectmenu_txt_btn_130_142">메뉴
-      선택하기</span><span class="writepost_selecttime_txt_btn_130_153">시간 선택하기</span><span
-      class="writepost_selectloc_txt_btn_130_154">장소 선택하기</span>
-    <div class="writepost_writepost_box_btn_130_148"></div><span
-      class="writepost_writepost_txt_130_149">게시하기</span><span class="writepost_sharemenu_txt_130_158">공유 메뉴</span><span
-      class="writepost_sharepeoplenum_txt_130_159">희망 공유 인원</span><span class="writepost_shareloc_txt_130_157">공유
-      장소</span><span class="writepost_sharetime_txt_130_156">공유 시간</span>
+    <div class="writepost_second_line_130_141"></div>
+	<span class="writepost_selectmenu_txt_btn_130_142">메뉴선택하기</span><span class="writepost_selecttime_txt_btn_130_153">시간 선택하기</span>
+	<span class="writepost_selectloc_txt_btn_130_154">장소 선택하기</span>
+    <div class="writepost_writepost_box_btn_130_148"></div>
+	<span class="writepost_writepost_txt_130_149">게시하기</span>
+	<span class="writepost_sharemenu_txt_130_158">공유 메뉴</span>
+	<span class="writepost_sharepeoplenum_txt_130_159">희망 공유 인원</span>
+	<span class="writepost_shareloc_txt_130_157">공유 장소</span>
+	<span class="writepost_sharetime_txt_130_156">공유 시간</span>
     <div class="writepost_2people_box_btn_130_160"></div><span class="writepost_2people_txt_130_161">2인</span>
     <div class="writepost_3people_box_btn_130_163"></div><span class="writepost_3people_txt_130_165">3인</span>
     <div class="writepost_4people_box_btn_130_166"></div><span class="writepost_4people_txt_130_168">4인</span>
@@ -26,7 +29,21 @@
 
 <script>
 export default {
-  name : "WritePostView",
+name : "WritePostView",
+method : {	//메서드 전부 에러
+chatList() {
+this.$router.push("/ChatListView");
+},
+enterHome() {
+this.$router.push("/HomePageView");
+},
+enterUserInfo() {
+this.$router.push("/UserInfoView");
+},
+enterSetLoc() {	//버그 생김
+this.$router.push("/SetLocView");
+}
+}
 }
 </script>
 

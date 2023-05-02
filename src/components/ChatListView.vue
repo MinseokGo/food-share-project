@@ -4,19 +4,17 @@
     <div class="chatlist_room_box_btn_142_7"></div>
     <div class="chatlist_room_box_btn_142_8"></div>
     <span class="chatlist_loc_txt_130_251">설정된 위치가 없습니다. 위치를 설정하여주세요.</span>
-    <div class="chatlist_addloc_icon_btn_130_252"></div>
+    <div class="chatlist_addloc_icon_btn_130_252" @click="enterSetLoc()"></div>
     <div class="chatlist_navbar_box_130_253"></div>
     <span class="chatlist_home_txt_130_254">홈</span>
     <span class="chatlist_chat_txt_130_255">채팅</span>
     <span class="chatlist_userinfo_txt_130_256">내정보</span>
-    <div class="chatlist_home_icon_btn_130_257"></div>
-    <div class="chatlist_chat_icon_btn_130_258"></div>
-    <div class="chatlist_userinfo_icon_btn_130_259"></div>
+    <div class="chatlist_home_icon_btn_130_257" @click="enterHome()"></div>
+    <div class="chatlist_chat_icon_btn_130_258" @click="chatList()"></div>
+    <div class="chatlist_userinfo_icon_btn_130_259" @click="enterUserInfo()"></div>
     <div class="chatlist_first_line_130_260"></div>
     <div class="chatlist_shop_icon_130_235"></div>
-	<button class="chatlist_chattitle_txt_130_232" @click="chatList()">
-		<span>허은진님과의 대화방</span>
-	</button>
+	<div class="chatlist_chattitle_txt_130_232" @click="chat()">허은진님과의 대화방</div>
 	<span class="chatlist_chatlastmsg_txt_130_233">네, 그렇게 하시죠.</span>
     <div class="chatlist_shareloc_box_130_261"></div><span class="chatlist_shareloc_txt_130_262">장전초 정문</span>
     <div class="chatlist_shopname_box_130_263"></div><span class="chatlist_shopname_txt_130_264">BBQ</span>
@@ -28,9 +26,21 @@
 export default {
   name : "ChatListView",
   methods: {
-    chatList() {
+	enterSetLoc() {
+      this.$router.push("/SetLocView");
+    },
+    chat() {
       this.$router.push("/ChatView");
-    }
+    },
+	chatList() {
+		this.$router.push("/ChatListView");
+	},
+	enterHome() {
+		this.$router.push("/HomePageView");
+	},
+	enterUserInfo() {
+		this.$router.push("/UserInfoView");
+	}
   }
 }
 /*import chatView from './chatView.vue'
