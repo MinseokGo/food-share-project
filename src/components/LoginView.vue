@@ -26,8 +26,6 @@
     />
     <div class="login_id_icon_152_17"></div>
     <div class="login_main_icon_152_19"></div>
-    <h2>{{ userId }}</h2>
-    <h2>{{ userPassword }}</h2>
   </div>
 </template>
 
