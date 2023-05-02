@@ -15,16 +15,37 @@
         <div class="userinfo_first_line_134_2"></div>
         <div class="userinfo_add_line_134_3"></div>
         <span class="userinfo_loc_txt_138_11">설정된 위치가 없습니다. 위치를 설정하여 주세요.</span>
-        <div class="userinfo_addloc_icon_138_12"></div>
+        <div class="userinfo_addloc_icon_138_12" @class="enterSetLoc()"></div>
         <div class="userinfo_navbar_box_138_13"></div>
         <span class="userinfo_home_txt_138_14">홈</span>
         <span class="userinfo_chat_txt_138_15">채팅</span>
         <span class="userinfo_userinfo_txt_138_16">내정보</span>
-        <div class="userinfo_home_icon_btn_138_17"></div>
-        <div class="userinfo_chat_icon_btn_138_18"></div>
-        <div class="userinfo_userinfo_icon_btn_138_19"></div>
+        <div class="userinfo_home_icon_btn_138_17" @class="enterHome()"></div>
+        <div class="userinfo_chat_icon_btn_138_18" @click="chatList()"></div>
+        <div class="userinfo_userinfo_icon_btn_138_19" @class="enterUserInfo()"></div>
     </div>
 </template>
+
+<script>
+export default {
+  name : "UserInfoView",
+  methods: {
+	chatList() {
+		this.$router.push("/ChatListView");
+	},
+	enterHome() {
+		this.$router.push("/HomePageView");
+	},
+	enterUserInfo() {
+		this.$router.push("/UserInfoView");
+	},
+    enterSetLoc() {
+        this.$router.push("/SetLocView");
+    },
+  }
+};
+</script>
+
 
 <style scoped>
 .userinfo_128_237 {

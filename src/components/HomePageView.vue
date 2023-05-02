@@ -3,27 +3,39 @@
   <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
 
   <div class="home_128_89">
-    <div class="home_writepost_icon_btn_128_96"></div>
+    <div class="home_writepost_icon_btn_128_96" @click="writePost()"></div>
     <span class="home_loc_txt_128_97">설정된 위치가 없습니다. 위치를 설정하여 주세요.</span>
-    <div class="home_addloc_icon_btn_128_111" @click="entersetloc()"></div>
+    <div class="home_addloc_icon_btn_128_111" @click="enterSetLoc()"></div>
     <div class="home_navbar_box_128_112"></div>
     <span class="home_home_txt_128_113">홈</span
     ><span class="home_chat_txt_128_114">채팅</span
     ><span class="home_useinfo_txt_128_115">내정보 </span>
-    <div class="home_home_icon_btn_128_116"></div>
-    <div class="home_chat_icon_btn_128_117"></div>
-    <div class="home_userinfo_icon_btn_128_118"></div>
+    <div class="home_home_icon_btn_128_116" @click="enterHome()"></div>
+    <div class="home_chat_icon_btn_128_117" @click="chatList()"></div>
+    <div class="home_userinfo_icon_btn_128_118" @click="enterUserInfo()"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name : "homePageView",
-  methods: {
-    entersetloc() {
-      this.$router.push("/Setloc");
-    }
-  },
+name : "HomePageView",
+methods: {
+writePost() {
+this.$router.push("/WritePostView");
+},
+enterSetLoc() {
+this.$router.push("/SetLocView");
+},
+chatList() {
+this.$router.push("/ChatListView");
+},
+enterHome() {
+this.$router.push("/HomePageView");
+},
+enterUserInfo() {
+this.$router.push("/UserInfoView");
+}
+}
 };
 </script>
 

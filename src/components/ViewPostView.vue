@@ -5,7 +5,7 @@
   <div class="viewpost_128_163">
     <span class="viewpost_posttitle_txt_128_175">자메이카 통다리 두 조각씩 먹으실 분~!</span>
     <div class="viewpost_joinshare_box_btn_128_224"></div>
-    <span class="viewpost_joinshare_txt_128_225">공유 참여</span>
+    <span class="viewpost_joinshare_txt_128_225" @click="enterShare()">공유 참여</span>
     <div class="viewpost_first_line_130_178"></div>
     <div class="viewpost_third_line_130_179"></div>
     <div class="viewpost_second_line_130_192"></div>
@@ -27,11 +27,31 @@
     <span class="viewpost_home_txt_138_5">홈</span>
     <span class="viewpost_chat_txt_138_6">채팅</span>
     <span class="viewpost_userinfo_txt_138_7">내정보</span>
-    <div class="viewpost_home_icon_btn_138_8"></div>
-    <div class="viewpost_chat_icon_btn_138_9"></div>
-    <div class="viewpost_userinfo_icon_btn_138_10"></div>
+    <div class="viewpost_home_icon_btn_138_8" @click="enterHome()"></div>
+    <div class="viewpost_chat_icon_btn_138_9" @click="chatList()"></div>
+    <div class="viewpost_userinfo_icon_btn_138_10" @click="enterUserInfo()"></div>
   </div>
 </template>
+
+<script>
+export default {
+name : "ViewPostView",
+method : {
+chatList() {
+this.$router.push("/ChatListView");
+},
+enterHome() {
+this.$router.push("/HomePageView");
+},
+enterUserInfo() {
+this.$router.push("/UserInfoView");
+},
+enterShare() {
+this.$router.push("/ChatView");
+}
+}
+}
+</script>
 
 <style scoped>
 
