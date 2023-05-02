@@ -1,9 +1,14 @@
 <template>
-  <meta charset="utf-8">
-  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+    rel="stylesheet"
+  />
 
   <div class="viewpost_128_163">
-    <span class="viewpost_posttitle_txt_128_175">자메이카 통다리 두 조각씩 먹으실 분~!</span>
+    <span class="viewpost_posttitle_txt_128_175"
+      >자메이카 통다리 두 조각씩 먹으실 분~!</span
+    >
     <div class="viewpost_joinshare_box_btn_128_224"></div>
     <span class="viewpost_joinshare_txt_128_225" @click="enterShare()">공유 참여</span>
     <div class="viewpost_first_line_130_178"></div>
@@ -21,8 +26,10 @@
     <span class="viewpost_sharepeoplenum_txt_130_186">2명</span>
     <span class="viewpost_shareloc_txt_130_187">공유 인원</span>
     <span class="viewpost_sharetime_txt_130_185">공유 시간</span>
-    <span class="viewpost_postcontent_txt_130_193">장전초 정문에서 음식 공유하실분! 제가 한 조각 밖에 못 먹어서 세 조각 드실 분 찾아요! 돈은 반반 내드릴게요. 공유 참여
-      누르시고 DM 부탁드립니다~~</span>
+    <span class="viewpost_postcontent_txt_130_193"
+      >장전초 정문에서 음식 공유하실분! 제가 한 조각 밖에 못 먹어서 세 조각 드실 분
+      찾아요! 돈은 반반 내드릴게요. 공유 참여 누르시고 DM 부탁드립니다~~</span
+    >
     <div class="viewpost_navbar_box_138_4"></div>
     <span class="viewpost_home_txt_138_5">홈</span>
     <span class="viewpost_chat_txt_138_6">채팅</span>
@@ -35,26 +42,25 @@
 
 <script>
 export default {
-name : "ViewPostView",
-method : {
-chatList() {
-this.$router.push("/ChatListView");
-},
-enterHome() {
-this.$router.push("/HomePageView");
-},
-enterUserInfo() {
-this.$router.push("/UserInfoView");
-},
-enterShare() {
-this.$router.push("/ChatView");
-}
-}
-}
+  name: "ViewPostView",
+  methods: {
+    chatList() {
+      this.$router.push("/ChatListView");
+    },
+    enterHome() {
+      this.$router.push("/HomePageView");
+    },
+    enterUserInfo() {
+      this.$router.push("/UserInfoView");
+    },
+    enterShare() {
+      this.$router.push("/ChatView");
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 .viewpost_128_163 {
   left: 50%;
   transform: translate(-50%, 0);

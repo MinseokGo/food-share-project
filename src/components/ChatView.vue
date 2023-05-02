@@ -27,7 +27,7 @@ export default {
     pay() {
       this.$router.push("/PayView");
 	}
-  }
+  },
 }
 </script>
 
