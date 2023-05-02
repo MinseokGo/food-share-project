@@ -14,7 +14,7 @@
     <div class="writepost_second_line_130_141"></div>
 	<span class="writepost_selectmenu_txt_btn_130_142">메뉴선택하기</span><span class="writepost_selecttime_txt_btn_130_153">시간 선택하기</span>
 	<span class="writepost_selectloc_txt_btn_130_154">장소 선택하기</span>
-    <div class="writepost_writepost_box_btn_130_148"></div>
+    <div class="writepost_writepost_box_btn_130_148" @click="enterPost()"></div>
 	<span class="writepost_writepost_txt_130_149">게시하기</span>
 	<span class="writepost_sharemenu_txt_130_158">공유 메뉴</span>
 	<span class="writepost_sharepeoplenum_txt_130_159">희망 공유 인원</span>
@@ -42,6 +42,9 @@ this.$router.push("/UserInfoView");
 },
 enterSetLoc() {	//버그 생김
 this.$router.push("/SetLocView");
+},
+enterPost() {
+this.$router.push("/HomePageView");
 }
 }
 }
