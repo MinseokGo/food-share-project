@@ -34,6 +34,13 @@
   </div>
 </template>
 
+<script>
+export default {
+  name : "PayView",
+}
+</script>
+
+
 <style scoped>
     .pay_128_315 { 
 	background-color:rgba(255, 255, 255, 1);
@@ -274,7 +281,7 @@
 	border-top-right-radius:20px;
 	border-bottom-left-radius:20px;
 	border-bottom-right-radius:20px;
-	background-image:url(src/assets/pay_shop_icon.png);
+	background-image:url(/src/assets/pay_shop_icon.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -405,7 +412,7 @@
 	border-top-right-radius:59.5px;
 	border-bottom-left-radius:59.5px;
 	border-bottom-right-radius:59.5px;
-	background-image:url(src/assets/pay_profile_icon.png);
+	background-image:url(/src/assets/pay_profile_icon.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -432,7 +439,7 @@
 	border-top-right-radius:59.5px;
 	border-bottom-left-radius:59.5px;
 	border-bottom-right-radius:59.5px;
-	background-image:url(src/assets/pay_profile1_icon.png);
+	background-image:url(/src/assets/pay_profile1_icon.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }

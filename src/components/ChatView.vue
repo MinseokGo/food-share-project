@@ -15,11 +15,21 @@
     <div class="chat_joinpay_box_btn_128_309"></div><span class="chat_joinpay_txt_128_310">결제 참여</span>
     <div class="chat_sendmsg_icon_btn_128_312"></div>
     <div class="chat_popup_box_128_390"></div><span class="chat_popupquestion_txt_128_409">결제를 진행하시겠습니까?</span>
-    <div class="chat_popupyes_box_btn_128_413"></div><span class="chat_popupyes_txt_128_414">네</span>
+    <div class="chat_popupyes_box_btn_128_413"></div><button class="chat_popupyes_txt_128_414" @click="pay()"><span>네</span></button>
     <div class="chat_popupno_box_btn_128_418"></div><span class="chat_popupno_txt_128_419">아니오</span>
   </div>
 </template>
-  
+<script >
+export default {
+  name : "ChatView",
+  methods: {
+    pay() {
+      this.$router.push("/PayView");
+	}
+  }
+}
+</script>
+
 <style scoped>
 .chat_128_275 { 
 	background-color:rgba(255, 255, 255, 1);

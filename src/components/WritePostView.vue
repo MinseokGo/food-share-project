@@ -24,6 +24,13 @@
   </div>
 </template>
 
+<script>
+export default {
+  name : "WritePostView",
+}
+</script>
+
+
 <style scoped>
     .writepost_130_43 { 
 	background-color:rgba(255, 255, 255, 1);
@@ -53,7 +60,7 @@
 	position:absolute;
 	left:308px;
 	top:88px;
-	background-image:url(src/assets/writepost_addloc_icon_btn.png);
+	background-image:url(/src/assets/writepost_addloc_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -112,7 +119,7 @@
 	position:absolute;
 	left:66px;
 	top:14px;
-	background-image:url(src/assets/writepost_home_icon_btn.png);
+	background-image:url(/src/assets/writepost_home_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -122,7 +129,7 @@
 	position:absolute;
 	left:225px;
 	top:14px;
-	background-image:url(src/assets/writepost_chat_icon_btn.png);
+	background-image:url(/src/assets/writepost_chat_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -132,7 +139,7 @@
 	position:absolute;
 	left:377px;
 	top:14px;
-	background-image:url(src/assets/writepost_userinfo_icon_btn.png);
+	background-image:url(/src/assets/writepost_userinfo_icon_btn.png);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
