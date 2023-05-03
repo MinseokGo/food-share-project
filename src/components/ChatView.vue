@@ -1,23 +1,29 @@
 <template>
 	<link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+
     <div class=chat_128_275>
     <div class="chat_back_box_btn_142_10"></div>
+	<!--채팅 시작-->
     <div class="chat_mymsg_box_128_279"></div><span class="chat_mymsg_txt_128_280">안녕하세요~!</span>
     <div class="chat_mymsg1_box_128_284"></div><span class="chat_mymsg1_txt_128_285">지금 바로 결제 가능하신가요?</span>
     <div class="chat_oppomsg_box_128_289"></div><span class="chat_oppomsg_txt_128_290">네, 안녕하세요~!</span>
     <div class="chat_oppoprofile_icon_128_291"></div>
     <div class="chat_oppomsg1_box_128_295"></div><span class="chat_oppomsg1_txt_128_296">네, 그렇게 하시죠.</span>
     <div class="chat_oppoprofile1_icon_128_297"></div>
+	<!--채팅 끝-->
     <div class="chat_inputmsg_box_inp_128_298"></div><span class="chat_examplemsg_txt_128_299">채팅 입력</span>
     <div class="chat_head_box_128_303"></div>
-    <span class="chat_back_box_txt_128_304"></span>
-    <span class="chat_chatoppo_txt_128_305">허 은진님</span>
-    <div class="chat_joinpay_box_btn_128_309"></div><span class="chat_joinpay_txt_128_310">결제 참여</span>
+    <span class="chat_back_box_txt_128_304" @click="back()">back</span>
+    <span class="chat_chatoppo_txt_128_305">{{ opposit }}님</span>
+    <div class="chat_joinpay_box_btn_128_309" @click="popup"></div><span class="chat_joinpay_txt_128_310">결제 참여</span>
     <div class="chat_sendmsg_icon_btn_128_312"></div>
-    <div class="chat_popup_box_128_390"></div><span class="chat_popupquestion_txt_128_409">결제를 진행하시겠습니까?</span>
-    <div class="chat_popupyes_box_btn_128_413"></div>
-	<div class="chat_popupyes_txt_128_414" @click="pay()">네</div>
-    <div class="chat_popupno_box_btn_128_418"></div><span class="chat_popupno_txt_128_419">아니오</span>
+	<!--결제 참여 팝업-->
+    <div class="chat_popup_box_128_390" v-show="is_show">
+	<span class="chat_popupquestion_txt_128_409">결제를 진행하시겠습니까?</span>
+    <div class="chat_popupyes_box_btn_128_413" @click="pay()">네</div>
+    <div class="chat_popupno_box_btn_128_418" @click="popup" v-show="is_show">아니오</div>
+	</div>
+	<!--결체 참여 팝업 끝-->
   </div>
 </template>
 <script >
@@ -26,8 +32,20 @@ export default {
   methods: {
     pay() {
       this.$router.push("/PayView");
+	},
+	back() {
+		this.$router.go(-1);
+	},
+	popup: function() {
+		this.is_show = !this.is_show;
 	}
   },
+  data() {
+	return {
+		is_show: false,
+		opposit: "허 은진"
+	}
+  }
 }
 </script>
 
@@ -279,8 +297,8 @@ export default {
 	width:330px;
 	height:262px;
 	position:absolute;
-	left:82px;
-	top:272px;
+	left:50%;
+	transform: translate(-50%,100%);
 	border-top-left-radius:20px;
 	border-top-right-radius:20px;
 	border-bottom-left-radius:20px;
@@ -290,65 +308,42 @@ export default {
 	color:rgba(0, 0, 0, 1);
 	width:254px;
 	height:19px;
-	position:absolute;
-	left:113px;
-	top:352px;
 	font-family:Inter;
+	left: 13%;
+	top: 30%;
+	position: absolute;
 	text-align:center;
 	font-size:18px;
 	letter-spacing:-0.5;
-	line-height:px;
 }
 .chat_popupyes_box_btn_128_413 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(216.75000607967377, 198.0372565984726, 149.91875141859055, 1);
 	width:97.80329895019531px;
 	height:37px;
-	position:absolute;
-	left:135px;
-	top:439px;
+	top:65%;
+	left: 15%;
+	position: absolute;
+	text-align: center;
+	line-height: 250%;
 	border-top-left-radius:30px;
 	border-top-right-radius:30px;
 	border-bottom-left-radius:30px;
 	border-bottom-right-radius:30px;
-}
-.chat_popupyes_txt_128_414 { 
-	color:rgba(0, 0, 0, 1);
-	width:75px;
-	height:24px;
-	position:absolute;
-	left:146px;
-	top:446px;
-	font-family:Inter;
-	text-align:center;
-	font-size:15px;
-	letter-spacing:-0.5;
-	line-height:px;
 }
 .chat_popupno_box_btn_128_418 { 
 	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
 	background-color:rgba(216.75000607967377, 198.0372565984726, 149.91875141859055, 1);
 	width:97.80329895019531px;
 	height:37px;
-	position:absolute;
-	left:240px;
-	top:439px;
+	right: 15%;
+	top:65%;
+	text-align: center;
+	line-height: 250%;
+	position: absolute;
 	border-top-left-radius:30px;
 	border-top-right-radius:30px;
 	border-bottom-left-radius:30px;
 	border-bottom-right-radius:30px;
-}
-.chat_popupno_txt_128_419 { 
-	color:rgba(0, 0, 0, 1);
-	width:91.38461303710938px;
-	height:24.12937355041504px;
-	position:absolute;
-	left:247px;
-	top:446px;
-	font-family:Inter;
-	text-align:center;
-	font-size:15px;
-	letter-spacing:-0.5;
-	line-height:px;
 }
 </style>

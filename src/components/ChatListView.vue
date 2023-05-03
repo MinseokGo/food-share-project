@@ -1,15 +1,12 @@
 <template>
-  <link
-    href="https://fonts.googleapis.com/css?family=Inter&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet"/>
+
   <div class="chatlist_130_202">
     <div class="chatlist_room_box_btn_142_7"></div>
     <div class="chatlist_room_box_btn_142_8"></div>
-    <span class="chatlist_loc_txt_130_251"
-      >설정된 위치가 없습니다. 위치를 설정하여주세요.</span
-    >
+    <span class="chatlist_loc_txt_130_251">설정된 위치가 없습니다. 위치를 설정하여주세요.</span>
     <div class="chatlist_addloc_icon_btn_130_252" @click="enterSetLoc()"></div>
+    <!--냅바 시작-->
     <div class="chatlist_navbar_box_130_253"></div>
     <span class="chatlist_home_txt_130_254">홈</span>
     <span class="chatlist_chat_txt_130_255">채팅</span>
@@ -17,16 +14,19 @@
     <div class="chatlist_home_icon_btn_130_257" @click="enterHome()"></div>
     <div class="chatlist_chat_icon_btn_130_258" @click="chatList()"></div>
     <div class="chatlist_userinfo_icon_btn_130_259" @click="enterUserInfo()"></div>
+    <!--냅바 끝-->
     <div class="chatlist_first_line_130_260"></div>
+    <!--채팅블록 시작-->
     <div class="chatlist_shop_icon_130_235"></div>
-    <div class="chatlist_chattitle_txt_130_232" @click="chat()">허은진님과의 대화방</div>
-    <span class="chatlist_chatlastmsg_txt_130_233">네, 그렇게 하시죠.</span>
+    <div class="chatlist_chattitle_txt_130_232" @click="chat()">{{ data().title }}</div>
+    <span class="chatlist_chatlastmsg_txt_130_233">{{ data().lastmsg }}</span>
     <div class="chatlist_shareloc_box_130_261"></div>
-    <span class="chatlist_shareloc_txt_130_262">장전초 정문</span>
+    <span class="chatlist_shareloc_txt_130_262">{{ data().location }}</span>
     <div class="chatlist_shopname_box_130_263"></div>
-    <span class="chatlist_shopname_txt_130_264">BBQ</span>
+    <span class="chatlist_shopname_txt_130_264">{{ data().shop }}</span>
     <div class="chatlist_sharetime_box_130_265"></div>
-    <span class="chatlist_sharetime_txt_130_266">19:30 주문</span>
+    <span class="chatlist_sharetime_txt_130_266">{{ data().time }}</span>
+    <!--채팅블록 끝-->
   </div>
 </template>
 
@@ -49,7 +49,16 @@ export default {
     enterUserInfo() {
       this.$router.push("/UserInfoView");
     },
-  },
+    data() {
+      return {
+        title: "허 은진님과의 대화방",
+        location: "장전초 정문",
+        time: "19:30 주문",
+        shop: "BBQ",
+        lastmsg: "네, 그렇게 하시죠."
+      }
+    }
+  }
 };
 /*import chatView from './chatView.vue'
 import { useRouter } from "vue-router";
