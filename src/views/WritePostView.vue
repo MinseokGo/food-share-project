@@ -3,6 +3,7 @@
   <HomePageSetLoc></HomePageSetLoc>
   <WritePostContent></WritePostContent>
   <WritePostSelect></WritePostSelect>
+  <WritePostBtn></WritePostBtn>
 </template>
 
 <script>
@@ -11,6 +12,7 @@ import HomePageNav from "/src/components/HomePageNav.vue";
 import HomePageSetLoc from "/src/components/HomePageSetLoc.vue";
 import WritePostContent from "/src/components/WritePostContent.vue";
 import WritePostSelect from "/src/components/WritePostSelect.vue";
+import WritePostBtn from "/src/components/WritePostBtn.vue";
 
 export default {
   //name 속성은 없어도 보통의 동작에 이상 없음, 디버깅시 개발자도구에서 알아보기 쉬우려고 작성, 컴포넌트 구조가 재귀적일때에도 필요
@@ -20,6 +22,7 @@ export default {
     HomePageSetLoc,
     WritePostContent,
     WritePostSelect,
+    WritePostBtn,
   },
 };
 </script>
