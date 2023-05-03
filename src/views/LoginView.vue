@@ -1,14 +1,15 @@
 <template>
-  <login-content></login-content>
+  <LoginContent></LoginContent>
 </template>
 
 <script>
-import LoginContent from "./src/components/LoginContent.vue";
+// from 할때 확장자 생략 가능
+import LoginContent from "/src/components/LoginContent.vue";
 
 export default {
-  name: "LoginView",
+  name: "LoginContent",
   components: {
-    "login-content": LoginContent,
+    LoginContent,
   },
 };
 </script>

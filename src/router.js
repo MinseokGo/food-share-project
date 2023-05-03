@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router"
 
-import LoginView from "./views/LoginView"
-import HomePageView from "./components/HomePageView"
-import SetLocView from "./components/SetLocView"
-import UserInfoView from "./components/UserInfoView"
-import ViewPostView from "./components/ViewPostView"
-import WritePostView from "./components/WritePostView"
-import ChatView from "./components/ChatView"
-import ChatListView from "./components/ChatListView"
-import PayView from "./components/PayView"
+import LoginView from "./views/LoginView.vue"
+import HomePageView from "./views/HomePageView.vue"
+import SetLocView from "./views/SetLocView.vue"
+import UserInfoView from "./views/UserInfoView.vue"
+import ViewPostView from "./views/ViewPostView.vue"
+import WritePostView from "./views/WritePostView.vue"
+import ChatView from "./views/ChatView.vue"
+import ChatListView from "./views/ChatListView.vue"
+import PayView from "./views/PayView.vue"
 
 // 라우터 설계
 const routes = [
