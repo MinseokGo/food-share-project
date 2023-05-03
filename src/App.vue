@@ -12,8 +12,7 @@ export default {
 </script>
 
 <style scoped>
-#app {
-  display: flex;
-  justify-content: center;
-}
+/* #app {
+  중앙배치코드??
+} */
 </style>
