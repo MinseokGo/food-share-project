@@ -1,5 +1,5 @@
 <template>
-  <div>내가 작성한 글</div>
+  <div>공유 메뉴,, 메뉴 선택하기.,</div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div>내가 작성한 글</div>
+  <div>제목을 입력해 주세요..</div>
 </template>
 
 <script>
