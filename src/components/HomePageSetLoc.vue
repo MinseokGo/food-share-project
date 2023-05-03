@@ -1,9 +1,9 @@
 <template>
-  <div>홈 채팅 내정보</div>
+  <div>위치 설정 부분</div>
 </template>
 
 <script>
 export default {
-  name: "HomePageNav",
+  name: "HomePageSetLoc",
 };
 </script>

@@ -1,9 +1,9 @@
 <template>
-  <div>홈 채팅 내정보</div>
+  <div>글쓰기 버튼</div>
 </template>
 
 <script>
 export default {
-  name: "HomePageNav",
+  name: "HomePageWritePost",
 };
 </script>

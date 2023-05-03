@@ -10,3 +10,10 @@ export default {
   components: {},
 };
 </script>
+
+<style scoped>
+#app {
+  display: flex;
+  justify-content: center;
+}
+</style>
