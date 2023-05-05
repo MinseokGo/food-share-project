@@ -1,9 +1,9 @@
 <template>
-  <HomePageNav></HomePageNav>
-  <HomePageSetLoc></HomePageSetLoc>
-  <WritePostContent></WritePostContent>
-  <WritePostSelect></WritePostSelect>
-  <WritePostBtn></WritePostBtn>
+  <HomePageNav />
+  <HomePageSetLoc />
+  <WritePostContent />
+  <WritePostSelect />
+  <WritePostBtn />
 </template>
 
 <script>

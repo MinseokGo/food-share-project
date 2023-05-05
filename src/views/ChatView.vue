@@ -1,8 +1,8 @@
 <template>
-  <ChatHead></ChatHead>
-  <ChatMessage></ChatMessage>
-  <ChatFooter></ChatFooter>
-  <ChatPopUp></ChatPopUp>
+  <ChatHead />
+  <ChatMessage />
+  <ChatFooter />
+  <ChatPopUp />
 </template>
 
 <script>

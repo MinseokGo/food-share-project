@@ -1,10 +1,10 @@
 <template>
-  <PayHead></PayHead>
-  <PayInfoShare></PayInfoShare>
-  <PayInfoPay></PayInfoPay>
-  <PayInfoEntry></PayInfoEntry>
-  <PayFooter></PayFooter>
-  <PayPopUp></PayPopUp>
+  <PayHead />
+  <PayInfoShare />
+  <PayInfoPay />
+  <PayInfoEntry />
+  <PayFooter />
+  <PayPopUp />
 </template>
 
 <script>

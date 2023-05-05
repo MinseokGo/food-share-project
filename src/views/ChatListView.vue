@@ -1,7 +1,7 @@
 <template>
-  <HomePageNav></HomePageNav>
-  <HomePageSetLoc></HomePageSetLoc>
-  <ChatListItem></ChatListItem>
+  <HomePageNav />
+  <HomePageSetLoc />
+  <ChatListItem />
 </template>
 
 <script>

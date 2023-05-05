@@ -1,6 +1,6 @@
 <template>
-  <DaumAPI></DaumAPI>
-  <SetLocBtn></SetLocBtn>
+  <DaumAPI />
+  <SetLocBtn/>
 </template>
 
 <script>

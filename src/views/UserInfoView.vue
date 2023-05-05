@@ -1,8 +1,8 @@
 <template>
-  <HomePageNav></HomePageNav>
-  <HomePageSetLoc></HomePageSetLoc>
-  <UserInfo></UserInfo>
-  <UserPostItem></UserPostItem>
+  <HomePageNav />
+  <HomePageSetLoc />
+  <UserInfo />
+  <UserPostItem />
 </template>
 
 <script>

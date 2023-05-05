@@ -1,9 +1,9 @@
 <template>
-  <HomePageNav></HomePageNav>
-  <HomePageSetLoc></HomePageSetLoc>
-  <ViewPostContent></ViewPostContent>
-  <ViewPostStoreInfo></ViewPostStoreInfo>
-  <ViewPostBtn></ViewPostBtn>
+  <HomePageNav />
+  <HomePageSetLoc />
+  <ViewPostContent />
+  <ViewPostStoreInfo />
+  <ViewPostBtn />
 </template>
 
 <script>
