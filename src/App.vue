@@ -23,13 +23,13 @@ body {
 }
 
 .outside_box {
-  width: 35%;
-  height: 90%;
+  width: 470px;
+  height: 800px;
   left: 50%;
   top: 0;
   position: absolute;
   transform: translate(-50%, 0);
-  background-color: white;
+  background-color: wite;
   border-radius: 15px;
 }
 </style>
