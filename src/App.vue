@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="outside_box">
     <router-view></router-view>
   </div>
 </template>
@@ -12,7 +12,20 @@ export default {
 </script>
 
 <style scoped>
-/* #app {
-  중앙배치코드??
-} */
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #E2E2E2;
+}
+
+.outside_box {
+    width: 470px;
+    height: 800px;
+    left: 50%;
+    top: 0;
+    position: absolute;
+    transform: translate(-50%, 0);
+    background-color: white;
+    border-radius: 15px;
+}
 </style>
