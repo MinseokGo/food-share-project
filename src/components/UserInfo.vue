@@ -38,6 +38,7 @@ export default {
   width: 20%;
   height: 100%;
   float: left;
+  border-radius: 45px;
 }
 
 .profile_main {
