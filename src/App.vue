@@ -28,21 +28,4 @@ body {
     background-color: white;
     border-radius: 15px;
 }
-
-body {
-  width: 100%;
-  height: 100%;
-  background-color: #e2e2e2;
-}
-
-.outside_box {
-  width: 35%;
-  height: 90%;
-  left: 50%;
-  top: 0;
-  position: absolute;
-  transform: translate(-50%, 0);
-  background-color: white;
-  border-radius: 15px;
-}
 </style>
