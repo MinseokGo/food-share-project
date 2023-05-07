@@ -1,14 +1,89 @@
 <template>
   <div class="address">
     <input type="text" id="postcode" placeholder="우편번호">
-    <button @click="search()">우편번호 찾기</button><br>
+    <div @click="search()" id="pcodebtn">우편번호 찾기</div> 
     <input type="text" id="roadAddress" placeholder="도로명주소">
     <input type="text" id="jibunAddress" placeholder="지번주소">
-    <span id="guide" style="color:#000;display:none"></span>
+    <span id="guide" style="color:#000; display:none"></span>
     <input type="text" id="detailAddress" placeholder="상세주소">
     <input type="text" id="extraAddress" placeholder="참고항목">
   </div>
 </template>
+
+<style scoped>
+.address{
+    width: 100%;
+    height: 80%;
+}
+#postcode{
+    position: relative;
+    top: 10%;
+    width: 90%;
+    height: 10%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+#pcodebtn{
+    position: relative;
+    top: 15%;
+    width: 90%;
+    height: 10%;
+    line-height: 400%;
+    display: block;
+    margin: 0 auto;
+    background-color: #ffeba4;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+#roadAddress{
+    position: relative;
+    top: 20%;
+    width: 90%;
+    height: 10%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+#jibunAddress{
+    position: relative;
+    top: 25%;
+    width: 90%;
+    height: 10%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+#guide{
+    top: 25%;
+    width: 100%;
+    height: 8%;
+}
+#detailAddress{
+    position: relative;
+    top: 30%;
+    width: 90%;
+    height: 10%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+#extraAddress{
+    position: relative;
+    top: 35%;
+    width: 90%;
+    height: 10%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+</style>
 
 <script>
 export default {
@@ -72,6 +147,3 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
