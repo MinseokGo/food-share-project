@@ -27,6 +27,7 @@ body {
     transform: translate(-50%, 0);
     background-color: white;
     border-radius: 15px;
+}
 
 body {
   width: 100%;
