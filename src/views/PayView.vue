@@ -4,7 +4,6 @@
   <PayInfoPay />
   <PayInfoEntry />
   <PayFooter />
-  <PayPopUp />
 </template>
 
 <script>
@@ -13,7 +12,6 @@ import PayInfoShare from "/src/components/PayInfoShare.vue";
 import PayInfoPay from "/src/components/PayInfoPay.vue";
 import PayInfoEntry from "/src/components/PayInfoEntry.vue";
 import PayFooter from "/src/components/PayFooter.vue";
-import PayPopUp from "/src/components/PayPopUp.vue";
 
 export default {
   name: "PayView",
@@ -23,7 +21,6 @@ export default {
     PayInfoPay,
     PayInfoEntry,
     PayFooter,
-    PayPopUp,
   },
 };
 </script>
