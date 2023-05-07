@@ -1,5 +1,3 @@
-import { createRouter, createWebHistory } from "vue-router"
-
 import LoginView from "/src/views/LoginView.vue"
 import HomePageView from "/src/views/HomePageView.vue"
 import SetLocView from "/src/views/SetLocView.vue"
