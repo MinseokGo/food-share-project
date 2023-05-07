@@ -23,7 +23,8 @@ export default {
 }
 .img{
   position: relative;
-  width: 13px;
-  height: 13px;
+  width: 4%;
+  height: 80%;
+  top: 15%;
 }
 </style>
