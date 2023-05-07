@@ -50,17 +50,23 @@ span {
 }
 
 .pay_con {
+  top: 5%;
+  position: relative;
   width: 100%;
   height: 80%;
 }
 
 .pay_list {
+  position: relative;
+  top: 5%;
   width: 70%;
   height: 100%;
   float: left;
 }
 
 .pay_money {
+  position: relative;
+  top: 5%;
   width: 30%;
   height: 100%;
   float: left;

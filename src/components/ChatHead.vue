@@ -1,6 +1,6 @@
 <template>
   <div class="chat_head">
-    <div class="back_btn">&lt;
+    <div class="back_btn" @click="back()">&lt;
     </div>
     <div class="opposit_box">허 은진님</div>
     <div class="pay_box">
@@ -25,6 +25,9 @@ export default {
     },
     pay() {
       this.$router.push('/PayView');
+    },
+    back() {
+      this.$router.go(-1);
     }
   },
   data() {
