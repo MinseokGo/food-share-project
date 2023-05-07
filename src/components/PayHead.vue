@@ -1,6 +1,6 @@
 <template>
   <div class="pay_head">
-    <div class="back_btn">&lt;</div>
+    <div class="back_btn" @click="back()">&lt;</div>
     <div class="center_box">결제 정보</div>
   </div>
 </template>
@@ -8,6 +8,11 @@
 <script>
 export default {
   name: "PayHead",
+  methods: {
+    back() {
+      this.$router.go(-1);
+    }
+  }
 };
 </script>
 
