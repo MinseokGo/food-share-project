@@ -13,8 +13,10 @@ export default {
 
 <style scoped>
 .setloc{
+  width: 100%;
+  height: 3%;
+  line-height: 150%;
   position: relative;
-  top:10px;
 }
 .text{
   color:rgba(80, 80, 80, 0.516);
@@ -23,6 +25,5 @@ export default {
   position: relative;
   width: 13px;
   height: 13px;
-
 }
 </style>
