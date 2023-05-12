@@ -7,7 +7,6 @@
         <div>배달팁</div>
         <div>공유 대행 수수료</div>
         <div>합산 금액</div>
-        <hr>
         <div>총 결제 금액</div>
       </div>
       <div class="pay_money">
@@ -19,7 +18,6 @@
         <br>
         <span>25000원</span>
         <br>
-        <hr>
         <span>12500원</span>
       </div>
     </div>
@@ -53,7 +51,7 @@ span {
   top: 5%;
   position: relative;
   width: 100%;
-  height: 80%;
+  height: 70%;
 }
 
 .pay_list {
