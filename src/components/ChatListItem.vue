@@ -1,11 +1,11 @@
 <template>
-  <div class="chatlistbox">채팅 리스트
+  <div class="chatlistbox">
     <ul>
       <li v-for="item in list" v-bind:key="item">
         <div class="chatindex">
           <img src="@/assets/chatlist_shop_icon.png" class="shop_icon">
           <div class="chat_info">
-            <div class="info_line">
+            <div class="info_line" @click="chat()">
               {{ item.at(0) }}
             </div>
             <div class="info_line">
@@ -25,6 +25,11 @@
 <script>
 export default {
   name: "ChatListItem",
+  methods: {
+    chat() {
+      this.$router.push('/ChatView');
+    }
+  },
   data() {
     return {
       list: [['허은진님과의 대화방', '네, 그렇게 하시죠.', '장전초'],['김수진', 'ㄱㄱ', '금전초'],['고민석', 'ㄷㅊㄹ', '남일고']]
