@@ -1,18 +1,18 @@
 <template>
   <div class="chatlistbox">
     <ul>
-      <li v-for="item in list" v-bind:key="item">
+      <li v-for="(item, index) in list" v-bind:key="index">
         <div class="chatindex">
           <img src="@/assets/chatlist_shop_icon.png" class="shop_icon">
           <div class="chat_info">
             <div class="info_line" @click="chat()">
-              {{ item.at(0) }}
+              {{ item.title }}
             </div>
             <div class="info_line">
-              {{ item.at(1) }}
+              {{ item.lastMsg }}
             </div>
             <div class="info_line">
-              {{ item.at(2) }}
+              {{ item.where }}
             </div>
           </div>
         </div>
@@ -32,7 +32,10 @@ export default {
   },
   data() {
     return {
-      list: [['허은진님과의 대화방', '네, 그렇게 하시죠.', '장전초'],['김수진', 'ㄱㄱ', '금전초'],['고민석', 'ㄷㅊㄹ', '남일고']]
+      list: [{title: '허은진님과의 대화방', lastMsg: '네, 그렇게 하시죠.', where: '장전초'},
+      {title: '김수진', lastMsg: 'ㄱㄱ', where: '금전초'},
+      {title: '고민석', lastMsg: 'ㄷㅊㄹ', where: '남일고'}
+    ]
     };
   }
 };
