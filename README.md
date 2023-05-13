@@ -105,9 +105,9 @@
 
 ### 사용할 기술 스택
 
-<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ed5d528-1002-4077-b874-b50126bc8a8b/Untitled.png">
+<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ed5d528-1002-4077-b874-b50126bc8a8b/Untitled.png" />
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e4b7a768-8bc3-4374-a097-03c1f2611cda/Untitled.png)
+<ing src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e4b7a768-8bc3-4374-a097-03c1f2611cda/Untitled.png" />
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/438d69a5-72f0-415f-b9dc-704e3c5c69cc/Untitled.png)
 
