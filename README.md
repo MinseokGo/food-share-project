@@ -105,19 +105,6 @@
 
 ### 사용할 기술 스택
 
-<img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ed5d528-1002-4077-b874-b50126bc8a8b/Untitled.png" />
-
-<ing src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e4b7a768-8bc3-4374-a097-03c1f2611cda/Untitled.png" />
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/438d69a5-72f0-415f-b9dc-704e3c5c69cc/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fefd0b49-5fef-4685-bb58-868a451c7ea5/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03924e25-eb54-40ea-9903-0de3fd8d0248/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/215e1c47-6cf5-4f32-bf0d-d37b6cbc51bc/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b84c44c7-63a3-40a1-9914-c926328a7ede/Untitled.png)
 
 프론트 엔드 : 아래의 이유로 프론트 엔드 라이브러리로 vue.js를 사용합니다.
 
