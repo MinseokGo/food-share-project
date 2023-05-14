@@ -1,44 +1,73 @@
 <template>
   <div class="content">
-    <img src="@/assets/login____icon.png" class="login_img">
+    <img src="@/assets/login____icon.png" class="login_img" />
     <div class="box">
       <div class="id_bar">
-        <img src="@/assets/login_id_icon.png" class="bar_img">
-        <input type="text" class="inp" placeholder="ID">
+        <img src="@/assets/login_id_icon.png" class="bar_img" />
+        <input type="text" class="inp" placeholder="ID" v-model="user" />
       </div>
       <div class="pass_bar">
-        <img src="@/assets/login_lock_icon.png" class="bar_img">
-        <input type="password" class="inp" placeholder="PassWord">
+        <img src="@/assets/login_lock_icon.png" class="bar_img" />
+        <input type="password" class="inp" placeholder="PassWord" v-model="password" />
       </div>
     </div>
-    <div class="login_btn">로그인</div>
+    <div class="login_btn" @click="login">로그인</div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "LoginContent",
+  methods: {
+    async login() {
+      alert(this.user);
+      try {
+        const result = await axios.get("/api/login", {
+          auth: {
+            username: this.user,
+            password: this.password,
+          },
+        });
+        if (result.status === 200) {
+          this.loginSuccess = true;
+        }
+      } catch (err) {
+        this.loginError = true;
+        throw new Error(err);
+      }
+    },
+  },
+  data() {
+    return {
+      loginSuccess: false,
+      loginError: false,
+      user: "",
+      password: "",
+      error: false,
+    };
+  },
 };
 </script>
 
 <style scoped>
-.content{
+.content {
   position: relative;
   top: 10%;
   height: 70%;
   width: 100%;
 }
-.login_img{
+.login_img {
   position: relative;
-  top:0px;
+  top: 0px;
   display: block;
   margin: 0 auto;
   height: 25%;
   width: 30%;
 }
-.box{
+.box {
   position: relative;
-  top:10%;
+  top: 10%;
   display: block;
   margin: 0 auto;
   width: 70%;
@@ -47,46 +76,46 @@ export default {
   border-radius: 15px 15px 15px 15px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
 }
-.id_bar{
+.id_bar {
   display: block;
   margin: 0 auto;
   position: relative;
-  top:32%;
+  top: 32%;
   width: 85%;
   height: 15%;
   background-color: white;
   border-radius: 15px;
 }
-.pass_bar{
+.pass_bar {
   display: block;
   margin: 0 auto;
   position: relative;
-  top:42%;
+  top: 42%;
   width: 85%;
   height: 15%;
   background-color: white;
   border-radius: 15px;
 }
-.bar_img{
+.bar_img {
   position: relative;
   left: 2%;
   top: 5%;
-  height:80%;
-  line-height:80%;
+  height: 80%;
+  line-height: 80%;
   float: left;
-  width:9%;
+  width: 9%;
 }
-.inp{
+.inp {
   position: relative;
   font-size: 100%;
   left: 4%;
   float: left;
   height: 90%;
-  line-height:550%;
-  width:80%;
+  line-height: 550%;
+  width: 80%;
   border: none;
 }
-.login_btn{
+.login_btn {
   font-size: 110%;
   display: block;
   padding: 2% 0 2% 0;
