@@ -69,8 +69,6 @@ export default {
 
 ul {
   list-style: none;
-  height: 100%;
-  width: 100%;
   padding-left: 0%;
 }
 
