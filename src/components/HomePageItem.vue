@@ -40,16 +40,24 @@ export default {
           where: "남일고",
         },
         {
-          title: "응애!",
-          where: "남일고",
+          title: "자메이카 한주디 하실분",
+          where: "장전초",
+        },
+        {
+          title: "후라이드 노나묵자!",
+          where: "금전초",
         },
         {
           title: "응애!",
           where: "남일고",
         },
         {
-          title: "응애!",
-          where: "남일고",
+          title: "자메이카 한주디 하실분",
+          where: "장전초",
+        },
+        {
+          title: "후라이드 노나묵자!",
+          where: "금전초",
         },
         {
           title: "응애!",

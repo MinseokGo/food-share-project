@@ -1,9 +1,14 @@
 <template>
   <div class="post_box">
     <div class="post_main">내가 작성한 글</div>
-    <hr>
+    <hr />
     <div class="post_list">
-      <div class="post">자메이카 통다리 두 조각씩 드실분~!</div>
+      <template v-for="(item, index) in list" v-bind:key="index">
+        <div class="info_line">
+          {{ item.title }}
+        </div>
+        <hr />
+      </template>
     </div>
   </div>
 </template>
@@ -11,6 +16,21 @@
 <script>
 export default {
   name: "UserPostItem",
+  data() {
+    return {
+      list: [
+        {
+          title: "자메이카 한주디 하실분",
+        },
+        {
+          title: "후라이드 노나묵자!",
+        },
+        {
+          title: "응애!",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -34,7 +54,7 @@ export default {
   display: block;
   margin: 0 auto;
 }
-.post {
+.info_line {
   width: 100%;
   height: 25%;
   font-size: 1.3rem;
