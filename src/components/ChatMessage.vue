@@ -129,27 +129,4 @@ li {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-/* .mymsg .msg_line{
-  -webkit-line-clamp : 3;
-}
-.yourmsg{
-  height: 20%;
-  width: 100%;
-  float: left;
-}
-.msg_line {
-  height: 100%;
-  width: 100%;
-}
-.msg_info {
-  width: 78%;
-  height: 100%;
-  float: left;
-}
-.user_profile_icon {
-  width: 15%;
-  height: 100%;
-  float: left;
-  border-radius: 30px;
-}  */
 </style>

@@ -1,14 +1,14 @@
 <template>
   <div class="nav">
-    <div class="home_btn">
+    <div class="home_btn" @click="home">
       <img src="@/assets/home_home_icon_btn.png" class="nav_img" />
       <div class="nav_text">홈</div>
     </div>
-    <div class="chat_btn">
+    <div class="chat_btn" @click="chatlist">
       <img src="@/assets/home_chat_icon_btn.png" class="nav_img" />
       <div class="nav_text">채팅</div>
     </div>
-    <div class="info_btn">
+    <div class="info_btn" @click="info">
       <img src="@/assets/home_userinfo_icon_btn.png" class="nav_img" />
       <div class="nav_text">내정보</div>
     </div>
@@ -18,6 +18,17 @@
 <script>
 export default {
   name: "HomePageNav",
+  methods: {
+    home() {
+      this.$router.push('/HomePageView');
+    },
+    chatlist() {
+      this.$router.push('/ChatListView');
+    },
+    info() {
+      this.$router.push('/UserInfoView');
+    }
+  },
 };
 </script>
 

@@ -25,7 +25,7 @@ img{
   width: 10%;
   z-index: 3;
   position: fixed;
-  right: 3%;
-  bottom: 3%;
+  right: 50px;
+  bottom: 50px;
 }
 </style>

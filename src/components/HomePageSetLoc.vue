@@ -1,7 +1,7 @@
 <template>
   <div class="setloc">
     <span class="text">설정된 위치가 없습니다. 위치를 설정하여 주세요.</span>
-    <img src="@/assets/home_addloc_icon_btn.png" class="img">
+    <img src="@/assets/home_addloc_icon_btn.png" class="img" @click="setloc">
   </div>
   <hr>
 </template>
@@ -9,6 +9,11 @@
 <script>
 export default {
   name: "HomePageSetLoc",
+  methods: {
+    setloc() {
+      this.$router.push('/SetLocView');
+    }
+  },
   data() {
     return {
       loc: [
