@@ -1,6 +1,7 @@
 <template>
   <div class="setloc">
-    <span class="text">설정된 위치가 없습니다. 위치를 설정하여 주세요.</span>
+    <span class="textoff" v-if="!loc">설정된 위치가 없습니다. 위치를 설정하여 주세요.</span>
+    <span class="texton" v-else-if="loc">{{ loc[2].locname }}&nbsp;&nbsp;&nbsp;{{loc[2].locaddr}}</span>
     <img src="@/assets/home_addloc_icon_btn.png" class="img" @click="setloc">
   </div>
   <hr>
@@ -16,6 +17,7 @@ export default {
   },
   data() {
     return {
+      // loc:""
       loc: [
         { locname: "연산 석이네", locaddr: "연제구 신금로 44번길 01-01" },
         { locname: "서울 GD네", locaddr: "중구 중앙로 1번길 9-9" },
@@ -33,8 +35,11 @@ export default {
   line-height: 150%;
   position: relative;
 }
-.text{
+.textoff{
   color:rgba(80, 80, 80, 0.516);
+}
+.texton{
+  color:rgba(0, 0, 0);
 }
 .img{
   position: relative;
