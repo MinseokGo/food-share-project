@@ -1,7 +1,7 @@
 <template>
   <div class="setloc">
     <span class="textoff" v-if="!loc">설정된 위치가 없습니다. 위치를 설정하여 주세요.</span>
-    <span class="texton" v-else-if="loc">{{ loc[2].locname }}&nbsp;&nbsp;&nbsp;{{loc[2].locaddr}}</span>
+    <span class="texton" v-else-if="loc">{{ loc[1].locname }}&nbsp;&nbsp;&nbsp;{{loc[1].locaddr}}</span>
     <img src="@/assets/home_addloc_icon_btn.png" class="img" @click="setloc">
   </div>
   <hr>
@@ -40,6 +40,7 @@ export default {
 }
 .texton{
   color:rgba(0, 0, 0);
+  font-weight: bold;
 }
 .img{
   position: relative;
