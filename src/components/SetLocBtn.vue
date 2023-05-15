@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="btn">
+    <div class="btn" @click="home">
       위치 추가하기
     </div>
   </div>
@@ -9,6 +9,11 @@
 <script>
 export default {
   name: "SetLocBtn",
+  methods: {
+    home() {
+      this.$router.push('/HomePageView');
+    }
+  },
 };
 </script>
 

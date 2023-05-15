@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .foot_box {
   width: 100%;
   height: 12%;

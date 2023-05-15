@@ -16,37 +16,42 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 export default {
   name: "LoginContent",
   methods: {
-    async login() {
-      alert(this.user);
-      try {
-        const result = await axios.get("/api/login", {
-          auth: {
-            username: this.user,
-            password: this.password,
-          },
-        });
-        if (result.status === 200) {
-          this.loginSuccess = true;
-        }
-      } catch (err) {
-        this.loginError = true;
-        throw new Error(err);
-      }
-    },
+    login() {
+      this.$router.push('/HomePageView');
+    }
   },
-  data() {
-    return {
-      loginSuccess: false,
-      loginError: false,
-      user: "",
-      password: "",
-      error: false,
-    };
-  },
+  // methods: {
+  //   async login() {
+  //     alert(this.user);
+  //     try {
+  //       const result = await axios.get("/api/login", {
+  //         auth: {
+  //           username: this.user,
+  //           password: this.password,
+  //         },
+  //       });
+  //       if (result.status === 200) {
+  //         this.loginSuccess = true;
+  //       }
+  //     } catch (err) {
+  //       this.loginError = true;
+  //       throw new Error(err);
+  //     }
+  //   },
+  // },
+  // data() {
+  //   return {
+  //     loginSuccess: false,
+  //     loginError: false,
+  //     user: "",
+  //     password: "",
+  //     error: false,
+  //   };
+  // },
 };
 </script>
 

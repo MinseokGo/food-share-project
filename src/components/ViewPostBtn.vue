@@ -1,14 +1,12 @@
 <template>
   <div class="box">
-    <div class="btn">공유 참여</div>
+    <div class="btn" @click="popup">공유 참여</div>
   </div>
   <div class="popup_box" v-show="is_show">
-    <div class="popup_1">공유 참여 하시겠습니까?<br>
-    (예를 누르면 채팅방으로 이동합니다)
-    </div>
+    <div class="popup_1">공유 참여 하시겠습니까?</div>
     <div class="popup_2">
-      <div class="pay_sel" @click="pay()">네</div>
-      <div class="pay_sel2" @click="popup()">아니오</div>
+      <div class="join_sel" @click="chat">네</div>
+      <div class="join_sel2" @click="popup">아니오</div>
     </div>
   </div>
 </template>
@@ -16,6 +14,22 @@
 <script>
 export default {
   name: "ViewPostBtn",
+  methods: {
+    popup() {
+      this.is_show = !this.is_show;
+    },
+    chat() {
+      this.$router.push('/ChatView');
+    },
+    back() {
+      this.$router.go(-1);
+    }
+  },
+  data() {
+    return {
+      is_show: false
+    }
+  }
 };
 </script>
 
@@ -39,8 +53,10 @@ export default {
   height: 30%;
   display: block;
   margin: 0 auto;
-  top: 20%;
-  position: relative;
+  top: 30%;
+  left: 15%;
+  position: fixed;
+  z-index: 1;
   background-color: #F0F0F0;
   border-radius: 15px;
 }
@@ -59,7 +75,7 @@ export default {
   height: 30%;
 }
 
-.pay_sel {
+.join_sel {
   width: 25%;
   height: 40%;
   float: left;
@@ -71,7 +87,7 @@ export default {
   line-height: 200%;
 }
 
-.pay_sel2 {
+.join_sel2 {
   width: 25%;
   height: 40%;
   float: left;
