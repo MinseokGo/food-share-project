@@ -4,54 +4,57 @@
     <div class="box">
       <div class="id_bar">
         <img src="@/assets/login_id_icon.png" class="bar_img" />
-        <input type="text" class="inp" placeholder="ID" v-model="user" />
+        <input type="text" class="inp" placeholder="ID" v-model="id" />
       </div>
       <div class="pass_bar">
         <img src="@/assets/login_lock_icon.png" class="bar_img" />
         <input type="password" class="inp" placeholder="PassWord" v-model="password" />
       </div>
     </div>
-    <div class="login_btn" @click="login">로그인</div>
+    <div class="login_btn" @click="login()">로그인</div>
   </div>
 </template>
 
 <script>
-// import axios from "axios";
+import axios from "axios";
 export default {
   name: "LoginContent",
-  methods: {
-    login() {
-      this.$router.push('/HomePageView');
-    }
-  },
   // methods: {
-  //   async login() {
-  //     alert(this.user);
-  //     try {
-  //       const result = await axios.get("/api/login", {
-  //         auth: {
-  //           username: this.user,
-  //           password: this.password,
-  //         },
-  //       });
-  //       if (result.status === 200) {
-  //         this.loginSuccess = true;
-  //       }
-  //     } catch (err) {
-  //       this.loginError = true;
-  //       throw new Error(err);
-  //     }
-  //   },
+  //   login() {
+  //     this.$router.push('/HomePageView');
+  //   }
   // },
-  // data() {
-  //   return {
-  //     loginSuccess: false,
-  //     loginError: false,
-  //     user: "",
-  //     password: "",
-  //     error: false,
-  //   };
-  // },
+  methods: {
+    async login() {
+      const data = {
+        email: this.id,
+        password: this.password,
+      }
+      axios
+      //localhost:3000/backend/api/auth/signin 이런식으로 바꿔야함
+        .post("https://reqres.in/api/login", data)
+        .then((res) => {
+          // 토큰 받아서 로컬에 저장?
+          // const userData = res.data;
+          // userData.user.token = userData.token;
+          console.log(res.data.token);
+          console.log(res);
+          this.$router.push('/HomePageView');
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+  },
+  data() {
+    return {
+      loginSuccess: false,
+      loginError: false,
+      id: "",
+      password: "",
+      error: false,
+    };
+  },
 };
 </script>
 
