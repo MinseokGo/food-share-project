@@ -19,22 +19,17 @@
 import axios from "axios";
 export default {
   name: "LoginContent",
-  // methods: {
-  //   login() {
-  //     this.$router.push('/HomePageView');
-  //   }
-  // },
   methods: {
     async login() {
       const data = {
         email: this.id,
-        password: this.password,
+        password: this.password
       }
       axios
-      //localhost:3000/backend/api/auth/signin 이런식으로 바꿔야함
+      //localhost:3000/backend/api/auth/signin 
         .post("https://reqres.in/api/login", data)
         .then((res) => {
-          // 토큰 받아서 로컬에 저장?
+          // 백엔드에서 토큰 받아서 로컬에 저장 하여 세션 유지
           // const userData = res.data;
           // userData.user.token = userData.token;
           console.log(res.data.token);
@@ -42,6 +37,7 @@ export default {
           this.$router.push('/HomePageView');
         })
         .catch(err => {
+          console.log(this.id + this.password);
           console.log(err);
         });
     },
@@ -50,8 +46,8 @@ export default {
     return {
       loginSuccess: false,
       loginError: false,
-      id: "",
-      password: "",
+      id: '',
+      password: '',
       error: false,
     };
   },
