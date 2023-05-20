@@ -23,7 +23,7 @@ export default {
     async login() {
       const data = {
         id: this.id,
-        password: this.password
+        password: this.password,
       }
       axios
       //localhost:3000/backend/api/auth/signin   |  https://reqres.in/api/login
