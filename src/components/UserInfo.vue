@@ -2,12 +2,12 @@
   <div class="user_box">
     <div class="profile_main_box">
       <img class="profile_icon" src="@/assets/userinfo_profile_icon.png">
-      <div class="profile_main"><span>{{username}}님의 정보</span></div>
+      <div class="profile_main"><span>{{ userid }}님의 정보</span></div>
     </div>
     <div class="profile_txt">
       <div class="profile_info">
         <div class="info_title" @click="fetchUserInfo">아이디</div>
-        <div class="info_con">{{userid}}</div>
+        <div class="info_con">{{ username }}</div>
       </div>
       <div class="profile_info">
         <div class="info_title">닉네임</div>
@@ -19,26 +19,22 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-const { mapState, mapGetters, mapActions } = createNamespacedHelpers('userinfo');
+const { mapState, mapActions, mapGetters } = createNamespacedHelpers('userinfo')
 
 export default {
   name: "UserInfo",
   computed: {
     ...mapState({
-      username: state => state.userinfo.username,
       userid: state => state.userinfo.userid,
+      username: state => state.userinfo.username,
+      u: state => state.userinfo
     }),
-    ...mapGetters([
-      'getusername',
-      'getuserid'
-    ]),
+    ...mapGetters(['getUsername', 'getUserid',]),
 
   },
   methods: {
-    ...mapActions([
-      'fetchUserInfo'
-    ])
-  },
+    ...mapActions(['fetchUserInfo']),
+  }
 };
 </script>
 

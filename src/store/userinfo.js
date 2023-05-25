@@ -6,33 +6,29 @@ export default ({
     namespaced: true,
     
     // data
-    state : {
+    state : { 
         userinfo:{
             username: "준아",
             userid: "junna1999",
-        }
+        },
     },
     actions: {
-        fetchUserInfo(context) {
+        async fetchUserInfo(context) {
             return axios.get('http://localhost:3000/backend/api/auth/juna')
             .then((res) => {
                 console.log(res);
-                context.commit('setUser', res)
+                context.commit('setUser', res.data)
             });
         }
     },
     // 값을 변경시킬 수 있는 메서드
     mutations: {
-        setUser(state, fetchUserInfo){
-            state.userinfo = fetchUserInfo.data;
+        setUser(state, userinfo){
+            state.userinfo = userinfo;
         }
     },
     getters : {
-        username(state){
-            return state.userinfo.username;
-        },
-        userid: state => {
-            return state.userinfo.userid;
-        }
+        getUsername: state => state.userinfo.username,
+        getUserid: state => state.userinfo.userid,
     },
 });
