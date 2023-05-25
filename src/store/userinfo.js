@@ -1,8 +1,10 @@
-import { createStore } from "vuex";
 import axios from "axios";
 
 // state, getters, mutations, actions, modules
-export default createStore({
+export default ({
+    // Evince this .js file is module
+    namespaced: true,
+    
     // data
     state : {
         userinfo:{

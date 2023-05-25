@@ -18,27 +18,21 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from "vuex";
+import { createNamespacedHelpers } from 'vuex'
+const { mapState, mapGetters, mapActions } = createNamespacedHelpers('userinfo');
 
 export default {
   name: "UserInfo",
-  // computed: {
-  //   //mapGetters 함수 등록
-  //   ...mapGetters([
-  //     userinfo: "Users",
-  //   ]),
-  // },
   computed: {
-    // getter를 객체 전개 연산자(Object Spread Operator)로 계산하여 추가합니다.
+    ...mapState({
+      username: state => state.userinfo.username,
+      userid: state => state.userinfo.userid,
+    }),
     ...mapGetters([
       'getusername',
       'getuserid'
     ]),
-    ...mapState({
-      // 화살표 함수는 코드를 매우 간결하게 만들어 줍니다!
-      username: state => state.userinfo.username,
-      userid: state => state.userinfo.userid,
-    })
+
   },
   methods: {
     ...mapActions([
