@@ -21,5 +21,10 @@ export default {
     UserInfo,
     UserPostItem,
   },
+  data(){
+    return {
+      
+    }
+  }
 };
 </script>

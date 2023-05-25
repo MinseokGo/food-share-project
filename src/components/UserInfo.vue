@@ -2,24 +2,49 @@
   <div class="user_box">
     <div class="profile_main_box">
       <img class="profile_icon" src="@/assets/userinfo_profile_icon.png">
-      <div class="profile_main"><span>김 기태님의 정보</span></div>
+      <div class="profile_main"><span>{{username}}님의 정보</span></div>
     </div>
     <div class="profile_txt">
       <div class="profile_info">
-        <div class="info_title">아이디</div>
-        <div class="info_con">kt8619</div>
+        <div class="info_title" @click="fetchUserInfo">아이디</div>
+        <div class="info_con">{{userid}}</div>
       </div>
       <div class="profile_info">
         <div class="info_title">닉네임</div>
-        <div class="info_con">딱좋노</div>
+        <div class="info_con">ㅇㅇ</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from "vuex";
+
 export default {
   name: "UserInfo",
+  // computed: {
+  //   //mapGetters 함수 등록
+  //   ...mapGetters([
+  //     userinfo: "Users",
+  //   ]),
+  // },
+  computed: {
+    // getter를 객체 전개 연산자(Object Spread Operator)로 계산하여 추가합니다.
+    ...mapGetters([
+      'getusername',
+      'getuserid'
+    ]),
+    ...mapState({
+      // 화살표 함수는 코드를 매우 간결하게 만들어 줍니다!
+      username: state => state.userinfo.username,
+      userid: state => state.userinfo.userid,
+    })
+  },
+  methods: {
+    ...mapActions([
+      'fetchUserInfo'
+    ])
+  },
 };
 </script>
 
