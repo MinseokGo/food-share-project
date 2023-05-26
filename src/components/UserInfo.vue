@@ -2,16 +2,16 @@
   <div class="user_box">
     <div class="profile_main_box">
       <img class="profile_icon" src="@/assets/userinfo_profile_icon.png">
-      <div class="profile_main"><span>{{ userid }}님의 정보</span></div>
+      <div class="profile_main"><span>{{ username }}님의 정보</span></div>
     </div>
     <div class="profile_txt">
       <div class="profile_info">
         <div class="info_title" @click="fetchUserInfo">아이디</div>
-        <div class="info_con">{{ username }}</div>
+        <div class="info_con">{{ userid }}</div>
       </div>
       <div class="profile_info">
         <div class="info_title">닉네임</div>
-        <div class="info_con">ㅇㅇ</div>
+        <div class="info_con">{{ username }}</div>
       </div>
     </div>
   </div>
