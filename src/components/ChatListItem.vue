@@ -6,13 +6,16 @@
           <img src="@/assets/chatlist_shop_icon.png" class="shop_icon">
           <div class="chat_info">
             <div class="info_line" @click="chat()">
-              {{ item.title }}
+              <!-- {{ item.title }} -->
+              {{ itme.title }}
             </div>
             <div class="info_line">
-              {{ item.lastMsg }}
+              <!-- {{ item.lastMsg }} -->
+              {{ item.lastmsg }}
             </div>
             <div class="info_line">
-              {{ item.where }}
+              <!-- {{ item.place }} -->
+              {{ item.place }}
             </div>
           </div>
         </div>
@@ -23,21 +26,39 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapState, mapActions, mapGetters } = createNamespacedHelpers('chatlist')
+
 export default {
   name: "ChatListItem",
-  methods: {
-    chat() {
-      this.$router.push('/ChatView');
-    }
-  },
-  data() {
-    return {
-      list: [{title: '허은진님과의 대화방', lastMsg: '네, 그렇게 하시죠.', where: '장전초'},
-      {title: '김수진', lastMsg: 'ㄱㄱ', where: '금전초'},
-      {title: '고민석', lastMsg: 'ㄷㅊㄹ', where: '남일고'}
+  // methods: {
+  //   chat() {
+  //     this.$router.push('/ChatView');
+  //   }
+  // },
+  // data() {
+  //   return {
+  //     list: [{title: '허은진님과의 대화방', lastMsg: '네, 그렇게 하시죠.', where: '장전초'},
+  //     {title: '김수진', lastMsg: 'ㄱㄱ', where: '금전초'},
+  //     {title: '고민석', lastMsg: 'ㄷㅊㄹ', where: '남일고'}
+  //   ]
+  //   };
+  // }
+  computed: {
+    ...mapState({
+      list: [{
+      title: state => state.chatlist.title,
+      lastmsg: state => state.chatlist.lastmsg,
+      place: state => state.chatlist.place,}
     ]
-    };
+  }),
+    ...mapGetters(['getTitle', 'getLmsg','getPlace']),
+
+  },
+  methods: {
+    ...mapActions(['fetchChatList']),
   }
+
 };
 </script>
 

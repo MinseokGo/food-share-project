@@ -4,63 +4,41 @@
     <div class="box">
       <div class="id_bar">
         <img src="@/assets/login_id_icon.png" class="bar_img" />
-        <input type="text" class="inp" placeholder="ID" v-model="id" />
+        <input type="text" class="inp" placeholder="ID" v-model="logininfo.id"/>
       </div>
       <div class="pass_bar">
         <img src="@/assets/login_lock_icon.png" class="bar_img" />
-        <input type="password" class="inp" placeholder="PassWord" v-model="password" />
+        <input type="password" class="inp" placeholder="PassWord" v-model="logininfo.password"/>
       </div>
     </div>
-    <div class="login_btn" @click="login()">로그인</div>
+    <div class="login_btn" @click="login">로그인</div>
   </div>
 </template>
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-const { mapState, mapActions, mapGetters } = createNamespacedHelpers('login')
+const { mapState, mapActions, mapGetters , mapMutations} = createNamespacedHelpers('login')
 
 export default {
   name: "LoginContent",
   computed: {
+    logininfo: {
+      get() {
+        return this.info;
+      },
+      set(value) {
+        this.updateLoginInfo(value);
+      }
+    },
     ...mapState({
-      id: state => state.logininfo.id,
-      password: state => state.logininfo.password,
+      info: state => state.logininfo,
     }),
-    ...mapGetters(['getLoginid', 'getLoginpassword',]),
-
+    ...mapGetters(['getLoginid', 'getLoginpassword','getL']),
   },
   methods: {
     ...mapActions(['login']),
+    ...mapMutations(['updateLoginInfo']),
   }
-  // methods: {
-  //   async login() {
-  //     const data = {
-  //       id: this.id,
-  //       password: this.password,
-  //     }
-  //     axios
-  //       .post("http://localhost:3000/backend/api/auth/signin", data)
-  //       .then((res) => {
-  //         // 백엔드에서 토큰 받아서 로컬에 저장 하여 세션 유지
-  //         // const userData = res.data;
-  //         // userData.user.token = userData.token;
-  //         // console.log(res.data.token);
-  //         console.log(res);
-  //         this.$router.push('/HomePageView');
-  //       })
-  //       .catch(err => {
-  //         // console.log(this.id + this.password);
-  //         console.log(err);
-  //       });
-  //   },
-  // },
-  // data() {
-  //   return {
-  //     id: '',
-  //     password: '',
-  //   };
-  // },
-
 };
 </script>
 
