@@ -19,7 +19,7 @@ export default ({
               password: this.password,
             }
             axios
-              .post("http://localhost:3000/backend/api/auth/signin", data)
+              .post("http://localhost:3000/rest/api/login", data)
               .then((res) => {
                 // 백엔드에서 토큰 받아서 로컬에 저장 하여 세션 유지
                 // const userData = res.data;
