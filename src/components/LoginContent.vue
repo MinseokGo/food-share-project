@@ -16,41 +16,51 @@
 </template>
 
 <script>
-import axios from "axios";
+import { createNamespacedHelpers } from 'vuex'
+const { mapState, mapActions, mapGetters } = createNamespacedHelpers('login')
+
 export default {
   name: "LoginContent",
+  computed: {
+    ...mapState({
+      id: state => state.logininfo.id,
+      password: state => state.logininfo.password,
+    }),
+    ...mapGetters(['getLoginid', 'getLoginpassword',]),
+
+  },
   methods: {
-    async login() {
-      const data = {
-        id: this.id,
-        password: this.password,
-      }
-      axios
-      //localhost:3000/backend/api/auth/signin   |  https://reqres.in/api/login
-        .post("http://localhost:3000/backend/api/auth/signin", data)
-        .then((res) => {
-          // 백엔드에서 토큰 받아서 로컬에 저장 하여 세션 유지
-          // const userData = res.data;
-          // userData.user.token = userData.token;
-          // console.log(res.data.token);
-          console.log(res);
-          this.$router.push('/HomePageView');
-        })
-        .catch(err => {
-          // console.log(this.id + this.password);
-          console.log(err);
-        });
-    },
-  },
-  data() {
-    return {
-      loginSuccess: false,
-      loginError: false,
-      id: '',
-      password: '',
-      error: false,
-    };
-  },
+    ...mapActions(['login']),
+  }
+  // methods: {
+  //   async login() {
+  //     const data = {
+  //       id: this.id,
+  //       password: this.password,
+  //     }
+  //     axios
+  //       .post("http://localhost:3000/backend/api/auth/signin", data)
+  //       .then((res) => {
+  //         // 백엔드에서 토큰 받아서 로컬에 저장 하여 세션 유지
+  //         // const userData = res.data;
+  //         // userData.user.token = userData.token;
+  //         // console.log(res.data.token);
+  //         console.log(res);
+  //         this.$router.push('/HomePageView');
+  //       })
+  //       .catch(err => {
+  //         // console.log(this.id + this.password);
+  //         console.log(err);
+  //       });
+  //   },
+  // },
+  // data() {
+  //   return {
+  //     id: '',
+  //     password: '',
+  //   };
+  // },
+
 };
 </script>
 

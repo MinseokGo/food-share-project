@@ -17,7 +17,7 @@ export default ({
             return axios.get('http://localhost:3000/backend/api/auth/juna')
             .then((res) => {
                 console.log(res);
-                context.commit('setUser', res.data)
+                context.commit('setUser', res.data);
             });
         }
     },
