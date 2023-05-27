@@ -26,7 +26,7 @@ export default ({
                 // userData.user.token = userData.token;
                 // console.log(res.data.token);
                 console.log(res);
-                this.$router.push('/HomePageView');
+                //this.$router.push('/HomePageView');
               })
               .catch(err => {
                 // console.log(this.id + this.password);
