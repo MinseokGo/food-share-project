@@ -30,18 +30,10 @@ export default ({
     // 값을 변경시킬 수 있는 메서드
     mutations: {
         setViewPost(state, viewpost){
-            console.log("setVP");
             state.viewpost = viewpost;
-            console.log(state.viewpost);
         },
-        // setTest(state, p){
-        //     console.log("setT" + p);
-        //     // state.viewpost.content = content;
-        //     // console.log(state.viewpost.content);
-        // }
     },
     getters : {
-        // getUsername: state => state.userinfo.username,
-        // getUserid: state => state.userinfo.userid,
+        getTest: state => state.viewpost
     },
 });
