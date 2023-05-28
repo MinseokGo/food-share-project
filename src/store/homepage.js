@@ -30,13 +30,24 @@ export default ({
         async viewPost(context, postId) {
             console.log(postId)
             return axios
-            .post('http://localhost:3000/rest/api/view', postId)
+            .get('http://localhost:3000/rest/api/view')
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
-                //viewpost.mutations(res.data)
-                //console.log("저장 되어있는 viewpost" + viewpost.state.viewpost);
-                router.push('/ViewPostView');
+            })
+            .catch(err => {
+                console.log(err);
             });
+            // return axios
+            // .post('http://localhost:3000/rest/api/view', postId)
+            // .then((res) => {
+            //     console.log("백에서 보낸 viewpost" + res);
+            //     //viewpost.mutations(res.data)
+            //     //console.log("저장 되어있는 viewpost" + viewpost.state.viewpost);
+            //     router.push('/ViewPostView');
+            // })
+            // .catch(err => {
+            //     console.log(err);
+            //   });
         }
     },
     // 값을 변경시킬 수 있는 메서드
