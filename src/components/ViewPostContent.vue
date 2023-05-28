@@ -34,7 +34,7 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-const { mapState } = createNamespacedHelpers('viewpost')
+const { mapState, mapGetters } = createNamespacedHelpers('viewpost')
 
 export default {
   name: "ViewPostContent",
@@ -42,6 +42,8 @@ export default {
     ...mapState({
       viewpost: state => state.viewpost,
     }),
+    ...mapGetters(['getViewpost'])
+
   },
 };
 </script>
