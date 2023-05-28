@@ -33,6 +33,7 @@ export default ({
             .get('http://localhost:3000/rest/api/view')
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
+                router.push('/ViewPostView');
             })
             .catch(err => {
                 console.log(err);
