@@ -3,7 +3,7 @@
     <ul>
       <template v-for="(item, index) in itemlist" v-bind:key="index">
         <li>
-          <div class="homeindex"  @click="viewPost(item.uid)">
+          <div class="homeindex"  @click="viewPost()">
             <img src="item.img" class="shop_icon" />
             <div class="post_info">
               <div class="info_line">

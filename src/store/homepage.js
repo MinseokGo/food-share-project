@@ -11,12 +11,12 @@ export default ({
     state : { 
         homeitem: [
             {
-                uid: "s",
-                title: "1",
-                place: "2",
-                time: "3",
-                people: "4",
-                img: "5",
+                uid: "",
+                title: "",
+                place: "",
+                time: "",
+                people: "",
+                img: "",
             },
             // {
             //     title: "title",
@@ -35,12 +35,12 @@ export default ({
                 console.log("home받을때 uid 있니?" + res.data);
             });
         },
-        async viewPost(context, uid) {
+        async viewPost() {
             return axios
-            .post('http://localhost:3000/rest/api/view', uid)
+            .post('http://localhost:3000/rest/api/view', 3)
             .then((res) => {
                 console.log(res);
-                console.log("viewPOst:" + uid);
+                console.log("viewPOst:" );
                 // viewpost.mutations.setViewPost({
                 //     title:"바",
                 //     content:"뀐",
