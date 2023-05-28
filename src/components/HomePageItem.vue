@@ -4,7 +4,8 @@
       <template v-for="(item, index) in itemlist" v-bind:key="index">
         <li>
           <div class="homeindex"  @click="viewpost()">
-            <img src="@/assets/chatlist_shop_icon.png" class="shop_icon" />
+            <!-- <img src="@/assets/chatlist_shop_icon.png" class="shop_icon" /> -->
+            <div>{{item.img}}</div>
             <div class="post_info">
               <div class="info_line">
                 {{ item.title }}
