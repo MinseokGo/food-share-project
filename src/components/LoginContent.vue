@@ -4,7 +4,7 @@
     <div class="box">
       <div class="id_bar">
         <img src="@/assets/login_id_icon.png" class="bar_img" />
-        <input type="text" class="inp" placeholder="ID" v-model="logininfo.id"/>
+        <input type="text" class="inp" placeholder="ID" v-model="logininfo.userId"/>
       </div>
       <div class="pass_bar">
         <img src="@/assets/login_lock_icon.png" class="bar_img" />

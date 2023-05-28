@@ -9,7 +9,7 @@ export default ({
     // data
     state : { 
         logininfo:{
-            id: "",
+            userId: "",
             password: "",
             //loginresult: false,
         },
@@ -19,14 +19,16 @@ export default ({
             return axios
               .post("http://localhost:3000/rest/api/login", context.state.logininfo)
               .then((res) => {
-                if(res.data){
-                    //context.commit('setResult',true)
-                    router.push('/HomePageView');
-                    console.log("로그인 성공입니다.");
-                }else {
-                    //context.commit('setResult',false)
-                    console.log("로그인 실패입니다.");
-                }
+                router.push('/HomePageView');
+                console.log(res);
+                // if(res.data){
+                //     //context.commit('setResult',true)
+                //     router.push('/HomePageView');
+                //     console.log("로그인 성공입니다.");
+                // }else {
+                //     //context.commit('setResult',false)
+                //     console.log("로그인 실패입니다.");
+                // }
                 //console.log(context.state.logininfo.loginresult);
               })
               .catch(err => {
