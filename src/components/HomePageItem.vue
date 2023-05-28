@@ -32,7 +32,7 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-const { mapState, mapActions, mapGetters , mapMutations} = createNamespacedHelpers('homepage')
+const { mapState, mapActions, mapGetters } = createNamespacedHelpers('homepage')
 
 export default {
   name: "HomePageItem",
@@ -43,12 +43,11 @@ export default {
     ...mapGetters(['getHomeItemList',]),
   },
   methods: {
-    ...mapActions(['login']),
-    ...mapMutations(['fetchHomeItemList']),
+    ...mapActions(['fetchHomeItemList']),
   },
   mounted() {
-    this.fetchHomeItemList
-    this.getHomeItemList
+    this.fetchHomeItemList();
+    this.getHomeItemList();
   },
 
 };

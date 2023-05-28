@@ -48,7 +48,4 @@ export default ({
         getLoginpassword: state => state.logininfo.password,
         getL: state => state.logininfo,
     },
-    mounted() {
-        this.login();
-    }
 });
