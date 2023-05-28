@@ -27,10 +27,10 @@ export default ({
                 context.commit('setHomeItem', res.data);
             });
         },
-        async viewPost(context, postId) {
-            console.log(postId)
+        async viewPost(context) {
+            console.log(context.getPostId)
             return axios
-            .post('http://localhost:3000/rest/api/view', postId)
+            .post('http://localhost:3000/rest/api/view', context.getPostId)
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
                 viewpost.mutations(res.data)
