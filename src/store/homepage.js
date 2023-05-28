@@ -27,14 +27,13 @@ export default ({
                 context.commit('setHomeItem', res.data);
             });
         },
-        async viewPost(context) {
-            console.log(context.state.homeitem.postId)
-            const d = "dsa"
+        async viewPost(context, postId) {
+            console.log(postId)
             return axios
-            .post('http://localhost:3000/rest/api/view', d)
+            .post('http://localhost:3000/rest/api/view', postId)
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
-                viewpost.mutations(res.data)
+                //viewpost.mutations(res.data)
                 console.log("저장 되어있는 viewpost" + viewpost.state.viewpost);
                 router.push('/ViewPostView');
             });
