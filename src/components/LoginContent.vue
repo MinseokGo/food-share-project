@@ -17,7 +17,7 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-const { mapState, mapActions, mapGetters , mapMutations} = createNamespacedHelpers('login')
+const { mapState, mapActions, mapMutations} = createNamespacedHelpers('login')
 
 export default {
   name: "LoginContent",
@@ -33,7 +33,6 @@ export default {
     ...mapState({
       info: state => state.logininfo,
     }),
-    ...mapGetters(['getLoginid', 'getLoginpassword','getL']),
   },
   methods: {
     ...mapActions(['login']),

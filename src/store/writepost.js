@@ -17,8 +17,9 @@ export default ({
         },
     },
     actions: {
-        async fetchUserInfo(context) {
-            return axios.post('http://localhost:3000/rest/api/view')
+        async writePost(context) {
+            return axios
+            .post('http://localhost:3000/rest/api/post', context.state.writepost)
             .then((res) => {
                 console.log(res);
                 context.commit('setUser', res.data);

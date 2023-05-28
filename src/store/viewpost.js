@@ -37,7 +37,7 @@ export default ({
         }
     },
     getters : {
-        getUsername: state => state.userinfo.username,
-        getUserid: state => state.userinfo.userid,
+        // getUsername: state => state.userinfo.username,
+        // getUserid: state => state.userinfo.userid,
     },
 });

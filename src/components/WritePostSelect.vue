@@ -2,27 +2,47 @@
   <div class="select_box">
     <div class="sel_line">
       <div class="sel_txt">공유 메뉴</div>
-      <div class="sel_option">메뉴 선택</div>
+      <input type="text" class="sel_option" placeholder="메뉴 선택" v-model="postinfo.userId"/>
     </div>
     <div class="sel_line">
       <div class="sel_txt">공유 시간</div>
-      <div class="sel_option">시간 선택</div>
+      <input type="text" class="sel_option" placeholder="시간 선택" v-model="postinfo.userId"/>
     </div>
     <div class="sel_line">
       <div class="sel_txt">공유 장소</div>
-      <div class="sel_option">장소 선택</div>
+      <input type="text" class="sel_option" placeholder="장소 선택" v-model="postinfo.userId"/>
     </div>
     <div class="sel_line">
       <div class="sel_txt">희망 공유 인원</div>
-      <div class="sel_option">인원 선택</div>
+      <input type="text" class="sel_option" placeholder="인원 선택" v-model="postinfo.userId"/>
     </div>
     <div class="sel_line"></div>
   </div>
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapState, mapActions, mapMutations} = createNamespacedHelpers('writepost')
+
 export default {
   name: "WritePostSelect",
+  computed: {
+    postinfo: {
+      get() {
+        return this.pinfo;
+      },
+      set(value) {
+        this.updateLoginInfo(value);
+      }
+    },
+    ...mapState({
+      pinfo: state => state.postinfo,
+    }),
+  },
+  methods: {
+    ...mapActions(['writePost']),
+    ...mapMutations(['updateLoginInfo']),
+  }
 };
 </script>
 
