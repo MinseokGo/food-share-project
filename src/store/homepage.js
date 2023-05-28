@@ -27,7 +27,7 @@ export default ({
                 context.commit('setHomeItem', res.data);
             });
         },
-        async viewPost(postId) {
+        async viewPost(context, postId) {
             return axios
             .post('http://localhost:3000/rest/api/view', postId)
             .then((res) => {
