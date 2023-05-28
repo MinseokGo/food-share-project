@@ -34,7 +34,7 @@ export default ({
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
                 //viewpost.mutations(res.data)
-                console.log("저장 되어있는 viewpost" + viewpost.state.viewpost);
+                //console.log("저장 되어있는 viewpost" + viewpost.state.viewpost);
                 router.push('/ViewPostView');
             });
         }
