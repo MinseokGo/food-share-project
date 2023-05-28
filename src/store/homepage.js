@@ -11,12 +11,12 @@ export default ({
     state : { 
         homeitem: [
             {
+                uid: "s",
                 title: "1",
                 place: "2",
                 time: "3",
                 people: "4",
                 img: "5",
-                uid: "s",
             },
             // {
             //     title: "title",
