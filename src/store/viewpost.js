@@ -41,6 +41,7 @@ export default ({
         // }
     },
     getters : {
-        getViewpost: state => state.viewpost,
+        // getUsername: state => state.userinfo.username,
+        // getUserid: state => state.userinfo.userid,
     },
 });
