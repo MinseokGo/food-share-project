@@ -36,8 +36,9 @@ export default ({
             });
         },
         async viewPost() {
+            const uid = "go"
             return axios
-            .post('http://localhost:3000/rest/api/view', 3)
+            .post('http://localhost:3000/rest/api/view', uid)
             .then((res) => {
                 console.log(res);
                 console.log("viewPOst:" );
