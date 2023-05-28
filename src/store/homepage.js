@@ -32,8 +32,8 @@ export default ({
             return axios.post('http://localhost:3000/rest/api/view', {postNum: p})
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
-                //viewpost.mutations(res.data)
-                //console.log("저장 되어있는 viewpost" + viewpost.state.viewpost);
+                viewpost.mutations.setViewPost(res.data);
+                console.log("저장 되어있는 viewpost" + viewpost.state.viewpost);
                 router.push('/ViewPostView');
             })
             .catch(err => {
