@@ -38,7 +38,7 @@ export default ({
             // .catch(err => {
             //     console.log(err);
             // });
-            return axios.post('http://localhost:3000/rest/api/view', postId)
+            return axios.post('http://localhost:3000/rest/api/home/view', postId)
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
                 //viewpost.mutations(res.data)
