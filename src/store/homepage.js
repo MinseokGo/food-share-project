@@ -10,19 +10,19 @@ export default ({
     state : { 
         homeitem: [
             {
-                title: "title",
-                place: "place",
-                time: "time",
-                people: "peoples",
+                title: "",
+                place: "",
+                time: "",
+                people: "",
                 img: ""
             },
-            {
-                title: "title",
-                place: "place",
-                time: "time",
-                people: "peoples",
-                img: ""
-            }
+            // {
+            //     title: "title",
+            //     place: "place",
+            //     time: "time",
+            //     people: "peoples",
+            //     img: ""
+            // }
         ]
     },
     actions: {
