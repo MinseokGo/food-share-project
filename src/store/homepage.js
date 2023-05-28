@@ -22,7 +22,7 @@ export default ({
     },
     actions: {
         async fetchHomeItemList(context) {
-            return axios.post('http://localhost:3000/rest/api/home')
+            return axios.get('http://localhost:3000/rest/api/home')
             .then((res) => {
                 context.commit('setHomeItem', res.data);
             });
@@ -38,9 +38,7 @@ export default ({
             // .catch(err => {
             //     console.log(err);
             // });
-            const a = "SADsda"
-            return axios
-            .post('http://localhost:3000/rest/api/view', a)
+            return axios.post('http://localhost:3000/rest/api/view', postId)
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
                 //viewpost.mutations(res.data)
