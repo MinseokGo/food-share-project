@@ -28,9 +28,9 @@ export default ({
             });
         },
         async viewPost(context) {
-            console.log(context.getPostId)
+            console.log(context.state.homeitem.postId)
             return axios
-            .post('http://localhost:3000/rest/api/view', context.getPostId)
+            .post('http://localhost:3000/rest/api/view', context.state.homeitem.postId)
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
                 viewpost.mutations(res.data)
