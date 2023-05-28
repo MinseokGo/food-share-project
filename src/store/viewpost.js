@@ -33,7 +33,12 @@ export default ({
             console.log("setVP");
             state.viewpost = viewpost;
             console.log(state.viewpost);
-        }
+        },
+        // setTest(state, p){
+        //     console.log("setT" + p);
+        //     // state.viewpost.content = content;
+        //     // console.log(state.viewpost.content);
+        // }
     },
     getters : {
         getViewpost: state => state.viewpost,
