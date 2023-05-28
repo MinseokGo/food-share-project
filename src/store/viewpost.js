@@ -32,6 +32,7 @@ export default ({
         setViewPost(state, viewpost){
             console.log("setVP");
             state.viewpost = viewpost;
+            console.log(state.viewpost);
         }
     },
     getters : {
