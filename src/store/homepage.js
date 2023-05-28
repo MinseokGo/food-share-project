@@ -28,6 +28,7 @@ export default ({
             });
         },
         async viewPost(context, p) {
+            p = "sda"
             console.log(context.state.postNum);
             return axios.post('http://localhost:3000/rest/api/view', {postNum: p})
             .then((res) => {
