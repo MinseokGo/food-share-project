@@ -40,10 +40,9 @@ export default {
   name: "ViewPostContent",
   computed: {
     ...mapState({
-      viewpost: state => state.viewpost,
+      viewpost: this.getHomeItemList,
     }),
     ...mapGetters(['getViewpost'])
-
   },
 };
 </script>
