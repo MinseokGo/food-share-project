@@ -29,8 +29,9 @@ export default ({
         },
         async viewPost(context) {
             console.log(context.state.homeitem.postId)
+            const d = "dsa"
             return axios
-            .post('http://localhost:3000/rest/api/view', context.state.homeitem.postId)
+            .post('http://localhost:3000/rest/api/view', d)
             .then((res) => {
                 console.log("백에서 보낸 viewpost" + res);
                 viewpost.mutations(res.data)
