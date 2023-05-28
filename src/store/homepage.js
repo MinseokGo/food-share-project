@@ -31,8 +31,8 @@ export default ({
         async fetchHomeItemList(context) {
             return axios.get('http://localhost:3000/rest/api/home')
             .then((res) => {
-                console.log("home받을때 uid 있니?" + res.data);
                 context.commit('setHomeItem', res.data);
+                console.log("home받을때 uid 있니?" + res.data);
             });
         },
         async viewPost(context, uid) {
