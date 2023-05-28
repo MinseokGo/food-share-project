@@ -47,7 +47,7 @@ export default {
   },
   mounted() {
     this.fetchHomeItemList();
-    this.getHomeItemList();
+    this.getHomeItemList;
   },
 
 };
