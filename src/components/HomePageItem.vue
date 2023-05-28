@@ -3,11 +3,11 @@
     <ul>
       <template v-for="(item, index) in itemlist" v-bind:key="index">
         <li>
-          <div class="homeindex"  @click="this.viewPost(item.postId)">
+          <div class="homeindex"  @click="viewPost(item.postId)">
             <img src="item.shopImg" class="shop_icon" />
             <div class="post_info">
               <div class="info_line">
-                {{ item.title }}
+                {{ item.title + item.postId}}
               </div>
               <div class="info_line">
                 <div class="info_box">
@@ -39,7 +39,7 @@ export default {
     ...mapState({
       itemlist: state => state.homeitem,
     }),
-    ...mapGetters(['getHomeItemList',]),
+    ...mapGetters(['getHomeItemList', 'getPostId']),
   },
   methods: {
     ...mapActions(['fetchHomeItemList','viewPost']),

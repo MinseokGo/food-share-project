@@ -28,6 +28,7 @@ export default ({
             });
         },
         async viewPost(context, postId) {
+            console.log(postId)
             return axios
             .post('http://localhost:3000/rest/api/view', postId)
             .then((res) => {
@@ -45,6 +46,7 @@ export default ({
         }
     },
     getters : {
+        getPostId: state => state.postId,
         getHomeItemList: state => state.homeitem,
     },
     modules: {
