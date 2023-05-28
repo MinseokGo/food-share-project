@@ -14,7 +14,7 @@ export default ({
             time:"",
             place:"",
             people:"",
-            sotre:"",
+            store:"",
             tip:""
         },
     },
@@ -26,13 +26,11 @@ export default ({
                 context.commit('setUser', res.data);
             });
         },
-        printTest(){
-            console.log("test");
-        }
     },
     // 값을 변경시킬 수 있는 메서드
     mutations: {
         setViewPost(state, viewpost){
+            console.log("setVP");
             state.viewpost = viewpost;
         }
     },
