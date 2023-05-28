@@ -30,7 +30,6 @@ export default {
         this.updateLoginInfo(value);
       }
     },
-
     ...mapState({
       info: state => state.logininfo,
     }),

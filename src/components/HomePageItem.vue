@@ -3,11 +3,11 @@
     <ul>
       <template v-for="(item, index) in itemlist" v-bind:key="index">
         <li>
-          <div class="homeindex"  @click="viewPost()">
+          <div class="homeindex"  @click="viewPost(item.postId)">
             <img src="item.shopImg" class="shop_icon" />
             <div class="post_info">
               <div class="info_line">
-                {{ item.title + item.postId }}
+                {{ item.title }}
               </div>
               <div class="info_line">
                 <div class="info_box">

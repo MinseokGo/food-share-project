@@ -18,13 +18,6 @@ export default ({
                 people: "",
                 shopImg: "",
             },
-            // {
-            //     title: "title",
-            //     place: "place",
-            //     time: "time",
-            //     people: "peoples",
-            //     img: ""
-            // }
         ]
     },
     actions: {
@@ -32,27 +25,15 @@ export default ({
             return axios.get('http://localhost:3000/rest/api/home')
             .then((res) => {
                 context.commit('setHomeItem', res.data);
-                console.log("home받을때 uid 있니?" + res.data);
             });
         },
-        async viewPost() {
-            const uid = "go"
+        async viewPost(postId) {
             return axios
-            .post('http://localhost:3000/rest/api/view', uid)
+            .post('http://localhost:3000/rest/api/view', postId)
             .then((res) => {
-                console.log(res);
-                console.log("viewPOst:" + res.data );
-                // viewpost.mutations.setViewPost({
-                //     title:"바",
-                //     content:"뀐",
-                //     menu:"데",
-                //     time:"t",
-                //     place:"p",
-                //     people:"",
-                //     sotre:"",
-                //     tip:""
-                // },);
-                // console.log(viewpost.state.viewpost);
+                console.log("백에서 보낸 viewpost" + res);
+                viewpost.mutations(res.data)
+                console.log("저장 되어있는 viewpost" + viewpost.state.viewpost);
                 router.push('/ViewPostView');
             });
         }
