@@ -1,4 +1,5 @@
 import axios from "axios";
+//import { router } from '../router.js'
 
 // state, getters, mutations, actions, modules
 export default ({
@@ -7,32 +8,39 @@ export default ({
     
     // data
     state : { 
-        chatlist: [{
-            title: "dsa",
-            place: "dsa",
-            time: "d",
-            people: "d",
+        homeitem: [
+            {
+                title: "title",
+                place: "place",
+                time: "time",
+                people: "peoples",
+                img: ""
+            },
+            {
+                title: "title",
+                place: "place",
+                time: "time",
+                people: "peoples",
+                img: ""
             }
         ]
     },
     actions: {
-        async fetchChatList(context) {
+        async fetchHomeItemList(context) {
             return axios.get('http://localhost:3000/rest/api/home')
             .then((res) => {
                 console.log(res);
-                context.commit('setUser', res.data);
+                context.commit('setHomeItem', res.data);
             });
         }
     },
     // 값을 변경시킬 수 있는 메서드
     mutations: {
-        setUser(state, chatlist){
-            state.chatlist = chatlist;
+        setHomeItem(state, homeitem){
+            state.homeitem = homeitem;
         }
     },
     getters : {
-        getTitle: state => state.chatlist.title,
-        getLmsg: state => state.chatlist.lastmsg,
-        getPlace: state => state.chatlist.place,
+        getHomeItemList: state => state.homeitem,
     },
 });

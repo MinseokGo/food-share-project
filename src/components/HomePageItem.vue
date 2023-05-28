@@ -1,7 +1,7 @@
 <template>
   <div class="homelistbox">
     <ul>
-      <template v-for="(item, index) in list" v-bind:key="index">
+      <template v-for="(item, index) in itemlist" v-bind:key="index">
         <li>
           <div class="homeindex"  @click="viewpost()">
             <img src="@/assets/chatlist_shop_icon.png" class="shop_icon" />
@@ -10,7 +10,15 @@
                 {{ item.title }}
               </div>
               <div class="info_line">
-                {{ item.where }}
+                <div class="info_box">
+                  {{ item.place }}
+                </div>
+                <div class="info_box">
+                  {{ item.time }}
+                </div>
+                <div class="info_box">
+                  {{ item.people }}
+                </div>
               </div>
             </div>
           </div>
@@ -22,55 +30,26 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapState, mapActions, mapGetters , mapMutations} = createNamespacedHelpers('homepage')
+
 export default {
   name: "HomePageItem",
-  data() {
-    return {
-      list: [
-        {
-          title: "자메이카 한주디 하실분",
-          where: "장전초",
-        },
-        {
-          title: "후라이드 노나묵자!",
-          where: "금전초",
-        },
-        {
-          title: "응애!",
-          where: "남일고",
-        },
-        {
-          title: "자메이카 한주디 하실분",
-          where: "장전초",
-        },
-        {
-          title: "후라이드 노나묵자!",
-          where: "금전초",
-        },
-        {
-          title: "응애!",
-          where: "남일고",
-        },
-        {
-          title: "자메이카 한주디 하실분",
-          where: "장전초",
-        },
-        {
-          title: "후라이드 노나묵자!",
-          where: "금전초",
-        },
-        {
-          title: "응애!",
-          where: "남일고",
-        },
-      ],
-    };
+  computed: {
+    ...mapState({
+      itemlist: state => state.homeitem,
+    }),
+    ...mapGetters(['getHomeItemList',]),
   },
   methods: {
-    viewpost() {
-      this.$router.push("/ViewPostView");
-    },
+    ...mapActions(['login']),
+    ...mapMutations(['fetchHomeItemList']),
   },
+  mounted() {
+    this.fetchHomeItemList
+    this.getHomeItemList
+  },
+
 };
 </script>
 
@@ -110,6 +89,11 @@ li {
   width: 100%;
 }
 
+.info_box{
+  float: left;
+  height: auto;
+  width: 33%;
+}
 
 hr {
   position: relative;
