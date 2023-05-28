@@ -8,11 +8,11 @@ export default ({
     // data
     state : { 
         viewpost:{
-            title:"t",
-            content:"c",
-            menu:"m",
-            time:"t",
-            place:"p",
+            title:"",
+            content:"",
+            menu:"",
+            time:"",
+            place:"",
             people:"",
             sotre:"",
             tip:""
