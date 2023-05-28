@@ -8,11 +8,11 @@ export default ({
     // data
     state : { 
         viewpost:{
-            title:"",
-            content:"",
-            menu:"",
-            time:"",
-            place:"",
+            title:"t",
+            content:"c",
+            menu:"m",
+            time:"t",
+            place:"p",
             people:"",
             sotre:"",
             tip:""
@@ -25,12 +25,15 @@ export default ({
                 console.log(res);
                 context.commit('setUser', res.data);
             });
+        },
+        printTest(){
+            console.log("test");
         }
     },
     // 값을 변경시킬 수 있는 메서드
     mutations: {
-        setUser(state, userinfo){
-            state.userinfo = userinfo;
+        setViewPost(state, viewpost){
+            state.viewpost = viewpost;
         }
     },
     getters : {
