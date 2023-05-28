@@ -27,9 +27,9 @@ export default ({
                 context.commit('setHomeItem', res.data);
             });
         },
-        async viewPost(context, postNum) {
+        async viewPost(context) {
             console.log(context);
-            axios.post('http://localhost:3000/rest/api/view', postNum)
+            axios.post('http://localhost:3000/rest/api/view', {postNum: "고민선"})
             .then(() => {
                 //console.log("백에서 보낸 viewpost" + res);
                 //viewpost.mutations(res.data)
