@@ -11,7 +11,7 @@ export default ({
         logininfo:{
             id: "",
             password: "",
-            loginresult: false,
+            //loginresult: false,
         },
     },
     actions: {
@@ -20,14 +20,14 @@ export default ({
               .post("http://localhost:3000/rest/api/login", context.state.logininfo)
               .then((res) => {
                 if(res.data){
-                    context.commit('setResult',true)
+                    //context.commit('setResult',true)
                     router.push('/HomePageView');
                     console.log("로그인 성공입니다.");
                 }else {
-                    context.commit('setResult',false)
+                    //context.commit('setResult',false)
                     console.log("로그인 실패입니다.");
                 }
-                console.log(context.state.logininfo.loginresult);
+                //console.log(context.state.logininfo.loginresult);
               })
               .catch(err => {
                 console.log(err);
@@ -39,9 +39,9 @@ export default ({
         updateLoginInfo(state, logininfo){
             state.logininfo = logininfo;
         },
-        setResult(state, loginresult){
-            state.logininfo.loginresult = loginresult
-        }
+        // setResult(state, loginresult){
+        //     state.logininfo.loginresult = loginresult
+        // }
     },
     getters : {
         getLoginid: state => state.logininfo.id,

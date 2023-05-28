@@ -11,7 +11,7 @@
         <input type="password" class="inp" placeholder="PassWord" v-model="logininfo.password"/>
       </div>
     </div>
-    <div class="login_btn" @click="login">로그인</div>
+    <div class="login_btn" @click="login()">로그인</div>
   </div>
 </template>
 
@@ -30,6 +30,7 @@ export default {
         this.updateLoginInfo(value);
       }
     },
+
     ...mapState({
       info: state => state.logininfo,
     }),
