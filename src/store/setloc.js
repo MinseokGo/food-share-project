@@ -19,7 +19,7 @@ export default ({
     actions: {
         async setLocInfo(context) {
             return axios
-              .post("http://localhost:3000/rest/api/login", context.state.locinfo)
+              .post("http://localhost:3000/rest/api/", context.state.locinfo)
               .then((res) => {
                 if(res.data){
                     //context.commit('setResult',true)

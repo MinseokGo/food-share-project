@@ -1,5 +1,5 @@
 import axios from "axios";
-//import { router } from '../router.js'
+import { router } from '../router.js'
 
 // state, getters, mutations, actions, modules
 export default ({
@@ -10,11 +10,12 @@ export default ({
     state : { 
         homeitem: [
             {
-                title: "",
-                place: "",
-                time: "",
-                people: "",
-                img: ""
+                title: "1",
+                place: "2",
+                time: "3",
+                people: "4",
+                img: "5",
+                uid: "s",
             },
             // {
             //     title: "title",
@@ -31,6 +32,14 @@ export default ({
             .then((res) => {
                 console.log(res);
                 context.commit('setHomeItem', res.data);
+            });
+        },
+        async viewPost(context, uid) {
+            router.push('/ViewPostView');
+            return axios
+            .post('http://localhost:3000/rest/api/view', uid)
+            .then((res) => {
+                console.log(res);
             });
         }
     },

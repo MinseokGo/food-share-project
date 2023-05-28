@@ -3,9 +3,8 @@
     <ul>
       <template v-for="(item, index) in itemlist" v-bind:key="index">
         <li>
-          <div class="homeindex"  @click="viewpost()">
-            <!-- <img src="@/assets/chatlist_shop_icon.png" class="shop_icon" /> -->
-            <div>{{item.img}}</div>
+          <div class="homeindex"  @click="viewPost(item.uid)">
+            <img src="item.img" class="shop_icon" />
             <div class="post_info">
               <div class="info_line">
                 {{ item.title }}
@@ -43,13 +42,12 @@ export default {
     ...mapGetters(['getHomeItemList',]),
   },
   methods: {
-    ...mapActions(['fetchHomeItemList']),
+    ...mapActions(['fetchHomeItemList','viewPost']),
   },
   mounted() {
     this.fetchHomeItemList();
     this.getHomeItemList;
   },
-
 };
 </script>
 

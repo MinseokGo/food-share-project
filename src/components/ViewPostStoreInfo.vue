@@ -7,10 +7,10 @@
       <img src="@/assets/viewpost_shop_icon.png">
       <div class="sub_info">
         <div class="line">
-          BBQ치킨 장점
+          {{ viewpost.store }}
         </div>
         <div class="line">
-          배달팁 data
+          {{ viewpost.tip }}
         </div>
       </div>
     </div>
@@ -18,8 +18,16 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapState } = createNamespacedHelpers('viewpost')
+
 export default {
   name: "ViewPostStoreInfo",
+  computed: {
+    ...mapState({
+      viewpost: state => state.viewpost,
+    }),
+  },
 };
 </script>
 

@@ -4,6 +4,7 @@ import login from './login'
 import chatlist from './chatlist'
 import homepage from './homepage'
 import setloc from './setloc'
+import viewpost from './viewpost'
 
 
 
@@ -14,7 +15,8 @@ export default createStore({
     login,
     homepage,
     chatlist,
-    setloc
+    setloc,
+    viewpost,
 
   },
 })

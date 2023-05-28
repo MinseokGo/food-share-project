@@ -1,33 +1,31 @@
 <template>
   <div class="box">
       <div class="title">
-        자메이카 틍다리 먹으실 분!~...
+        {{ viewpost.title }}
       </div>
       <hr>
       <div class="content_box">
         <div class="content">
-          장전초 정문에서 음식 공유하실분!
-          제가 한 조각 밖에 못 먹어서 세 조각 드실 분 찾아요! 
-          돈은 반반 내드릴게요.
+          {{ viewpost.content }}
         </div>
       </div>
       <hr>
       <div class="option_box">
         <div class="option_line">
           <div class="option">공유 메뉴</div>
-          <div class="option_post">자메이카 통다리</div>
+          <div class="option_post">{{ viewpost.menu }}</div>
         </div>
         <div class="option_line">
           <div class="option">공유 시간</div>
-          <div class="option_post">19:30분 주문</div>
+          <div class="option_post">{{ viewpost.time }}</div>
         </div>
         <div class="option_line">
           <div class="option">공유 장소</div>
-          <div class="option_post">장전초 정문</div>
+          <div class="option_post">{{ viewpost.place }}</div>
         </div>
         <div class="option_line">
           <div class="option">공유 인원</div>
-          <div class="option_post">2명</div>
+          <div class="option_post">{{ viewpost.people }}</div>
         </div>
       </div>
       <hr>
@@ -35,8 +33,16 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapState } = createNamespacedHelpers('viewpost')
+
 export default {
   name: "ViewPostContent",
+  computed: {
+    ...mapState({
+      viewpost: state => state.viewpost,
+    }),
+  },
 };
 </script>
 
