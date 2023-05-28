@@ -1,5 +1,5 @@
 import axios from "axios";
-//import { router } from '../router.js'
+import { router } from '../router.js'
 import viewpost from './viewpost'
 
 // state, getters, mutations, actions, modules
@@ -34,7 +34,7 @@ export default ({
                 console.log("백에서 보낸 viewpost" + res);
                 //viewpost.mutations(res.data)
                 //console.log("저장 되어있는 viewpost" + viewpost.state.viewpost);
-                //router.push('/ViewPostView');
+                router.push('/ViewPostView');
             })
             .catch(err => {
                 console.log(err);
