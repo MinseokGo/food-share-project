@@ -11,7 +11,6 @@ export default ({
     state : { 
         homeitem: [
             {
-                postId: "",
                 postNum: "",
                 title: "",
                 place: "",
@@ -49,7 +48,7 @@ export default ({
         }
     },
     getters : {
-        getPostId: state => state.postId,
+        // getPostId: state => state.postId,
         getHomeItemList: state => state.homeitem,
     },
     modules: {

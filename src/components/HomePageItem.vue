@@ -39,7 +39,7 @@ export default {
     ...mapState({
       itemlist: state => state.homeitem,
     }),
-    ...mapGetters(['getHomeItemList', 'getPostId']),
+    ...mapGetters(['getHomeItemList']),
   },
   methods: {
     ...mapActions(['fetchHomeItemList','viewPost']),
