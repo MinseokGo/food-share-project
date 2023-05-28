@@ -11,12 +11,12 @@ export default ({
     state : { 
         homeitem: [
             {
-                uid: "",
+                postId: "",
                 title: "",
                 place: "",
                 time: "",
                 people: "",
-                img: "",
+                shopImg: "",
             },
             // {
             //     title: "title",
@@ -41,7 +41,7 @@ export default ({
             .post('http://localhost:3000/rest/api/view', uid)
             .then((res) => {
                 console.log(res);
-                console.log("viewPOst:" );
+                console.log("viewPOst:" + res.data );
                 // viewpost.mutations.setViewPost({
                 //     title:"바",
                 //     content:"뀐",
