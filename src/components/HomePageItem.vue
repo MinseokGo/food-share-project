@@ -7,7 +7,7 @@
             <img src="item.shopImg" class="shop_icon" />
             <div class="post_info">
               <div class="info_line">
-                {{ item.title + item.postId }}
+                {{ item.title }}
               </div>
               <div class="info_line">
                 <div class="info_box">
