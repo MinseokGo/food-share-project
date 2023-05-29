@@ -1,4 +1,5 @@
 import http from "../http"
+import { router } from '../router.js'
 
 // state, getters, mutations, actions, modules
 export default ({
@@ -20,9 +21,8 @@ export default ({
         async writePost(context) {
             return http
             .post('http://localhost:3000/rest/api/post', context.state.writepost)
-            .then((res) => {
-                console.log(context.state.writepost);
-                console.log(res);
+            .then(() => {
+                router.push("/HomePageView")
             });
         }
     },
