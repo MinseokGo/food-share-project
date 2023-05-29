@@ -1,5 +1,6 @@
 import axios from "axios"
 import store from "./store/login.js"
+import jwt from "./common/jwt"
 
 const http = axios.create({
   baseURL: "http://localhost:3000",
@@ -10,8 +11,8 @@ http.interceptors.request.use(
   config => {
     const isAuthenticated = store.getters["isAuthenticated"]
     if (isAuthenticated) {
-        console.log("http.js:" + store.getters["getAccessToken"].toString())
-        config.headers.common["Authorization"] = store.getters["getAccessToken"].toString()
+        //console.log("http.js:" + store.getters["getAccessToken"])
+        config.headers["Authorization"] = `Bearer ${jwt.getToken()}`
         //config.headers.Authorization = store.getters["getAccessToken"]
     }
     return config
