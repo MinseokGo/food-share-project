@@ -27,8 +27,6 @@ export default ({
             state.token.accessToken = payload.accessToken
             state.isAuthenticated = true
             jwt.saveToken(payload.accessToken)
-            console.log("페이로드 토큰" + payload.accessToken + "스테이트 토큰" + state.token.accessToken)
-            console.log("local storage token save suc!")
         },
     },
     actions: {
@@ -37,8 +35,6 @@ export default ({
                 .post("http://localhost:3000/rest/api/login", context.state.logininfo)
                 .then((res) => {
                     const data = res.data
-                    console.log("login action: res" + res)
-                    console.log("login action: data" + data)
                     context.commit("login", {accessToken: data})
 
                     if (res.status == 200) {
