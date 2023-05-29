@@ -36,6 +36,7 @@ export default ({
         async fetchHomeItemList(context) {
             return http.get('http://localhost:3000/rest/api/home')
             .then((res) => {
+                console.log(res.data)
                 context.commit('setHomeItem', res.data);
             });
         },
@@ -65,5 +66,5 @@ export default ({
     },
     modules: {
         viewpost,
-      },
+    },
 });
