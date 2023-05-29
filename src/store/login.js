@@ -36,13 +36,14 @@ export default ({
             return http
                 .post("http://localhost:3000/rest/api/login", context.state.logininfo)
                 .then((res) => {
-                    const { data } = res.data
+                    const data = res.data
+                    console.log("login action: res" + res)
+                    console.log("login action: data" + data)
                     context.commit("login", {accessToken: data})
-                    console.log("login action" + data);
 
                     if (res.status == 200) {
-                        console.log(res);
-                        router.push("/HomePageView");
+                        console.log(res)
+                        router.push("/HomePageView")
                     }
                 })
                 .catch(err => {
