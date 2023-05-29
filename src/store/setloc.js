@@ -18,21 +18,23 @@ export default ({
     },
     actions: {
         async setLocInfo(context) {
+            console.log("보낸 요청 객체" + context.state.locinfo);
             return http
-              .post("http://localhost:3000/rest/api/", context.state.locinfo)
+              .post("http://localhost:3000/rest/api/setloc", context.state.locinfo)
               .then(() => {
                 console.log("보낸 요청 객체" + context.state.locinfo);
-                
                 router.push('/HomePageView');
               })
               .catch(err => {
                 console.log(err);
+                router.push('/HomePageView');
               });
+              
         }
     },
     // 값을 변경시킬 수 있는 메서드
     mutations: {
-        setLocInfo(state, locinfo){
+        updateLocInfo(state, locinfo){
             state.locinfo = locinfo;
         }
     },

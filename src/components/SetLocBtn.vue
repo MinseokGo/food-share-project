@@ -1,19 +1,20 @@
 <template>
   <div class="box">
-    <div class="btn" @click="home">
+    <div class="btn" @click="this.setLocInfo()">
       위치 추가하기
     </div>
   </div>
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapActions } = createNamespacedHelpers('setloc')
+
 export default {
   name: "SetLocBtn",
   methods: {
-    home() {
-      this.$router.push('/HomePageView');
-    }
-  },
+    ...mapActions(['setLocInfo']),
+  }
 };
 </script>
 
