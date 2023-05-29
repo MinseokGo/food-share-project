@@ -20,7 +20,7 @@ export default ({
         },
     },
     actions: {
-        async fetchUserInfo(context) {
+        async fetchViewPost(context) {
             return http.post('http://localhost:3000/rest/api/post')
             .then((res) => {
                 console.log(res);
