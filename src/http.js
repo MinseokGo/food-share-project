@@ -1,5 +1,5 @@
 import axios from "axios"
-import store from "./store/login.js"
+import store from "./store/index.js"
 // import jwt from "./common/jwt"
 
 const http = axios.create({
@@ -9,12 +9,15 @@ const http = axios.create({
 
 http.interceptors.request.use(
   config => {
-    const isAuthenticated = store.getters["isAuthenticated"]
-    console.log("is: " + store.getters["isAuthenticated"])
-    if (isAuthenticated) {
+    // const isAuthenticated = store.getters["isAuthenticated"]
+    // console.log("is: " + store.getters["isAuthenticated"])
+    // if (isAuthenticated) {
+        const d = true;
+    if(d){
         console.log("get: " + store.getters["getAccessToken"])
         //console.log("http.js:" + store.getters["getAccessToken"])
-        config.headers["Authorization"] = store.getters["getAccessToken"]
+        // config.headers["Authorization"] = store.getters["getAccessToken"]
+        config.headers["Authorization"] = "dsdasdssa"
         //config.headers.Authorization = store.getters["getAccessToken"]
     }
     return config
