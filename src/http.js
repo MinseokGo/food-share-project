@@ -10,13 +10,12 @@ const http = axios.create({
 http.interceptors.request.use(
   config => {
     const isAuthenticated = store.getters["isAuthenticated"]
-    console.log("get: " + store.login.getters["getAccessToken"])
 
     // console.log("is: " + store.getters["isAuthenticated"])
     if (isAuthenticated) {
-        console.log("get: " + store.login.getters["getAccessToken"])
+        console.log("get: " + store.getters["getAccessToken"])
         //console.log("http.js:" + store.getters["getAccessToken"])
-        config.headers["Authorization"] = store.login.getters["getAccessToken"]
+        config.headers["Authorization"] = store.getters["getAccessToken"]
         //config.headers.Authorization = store.getters["getAccessToken"]
     }
     return config
