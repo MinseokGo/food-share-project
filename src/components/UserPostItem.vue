@@ -42,6 +42,8 @@ export default {
   line-height: 200%;
 }
 .post_list {
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 90%;
   height: 80%;
   display: block;
