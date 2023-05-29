@@ -10,9 +10,9 @@ http.interceptors.request.use(
   config => {
     const isAuthenticated = store.getters["isAuthenticated"]
     if (isAuthenticated) {
-        const data = { Authorization: store.getters["getAccessToken"]}
-        config.headers.common["Authorization"] = data
-        console.log("http.js" + {"Authorization" : store.getters["getAccessToken"]})
+        console.log("http.js:" + store.getters["getAccessToken"].toString())
+        config.headers.common["Authorization"] = store.getters["getAccessToken"].toString()
+        //config.headers.Authorization = store.getters["getAccessToken"]
     }
     return config
   },
