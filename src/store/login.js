@@ -48,11 +48,11 @@ export default ({
           },
     },
     getters : {
-        getAccessToken: state => state.token.accessToken,
+        getAccessToken: jwt.getToken(),
         // getAccessToken: function (state) {
         //     return state.token.accessToken
         // },
-        isAuthenticated: state => state.isAuthenticated,
+        isAuthenticated: !!jwt.getToken(),
         // isAuthenticated: function (state) {
         //     return state.isAuthenticated
         // },
