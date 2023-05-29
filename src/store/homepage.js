@@ -30,6 +30,9 @@ export default ({
         toUserInfo() {
             router.push('/UserInfoView');
         },
+        toSetLoc() {
+            router.push('/SetLocView');
+        },
         toWritePost() {
             router.push('/WritePostView');
         },
