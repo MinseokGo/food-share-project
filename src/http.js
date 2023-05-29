@@ -21,6 +21,6 @@ http.interceptors.request.use(
         Promise.reject(error)
   }
 )
-http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded"
+//http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded"
 
 export default http
