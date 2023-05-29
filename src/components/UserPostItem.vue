@@ -5,7 +5,7 @@
     <div class="post_list">
       <template v-for="(item, index) in list" v-bind:key="index">
         <div class="info_line">
-          {{ item.titles }}
+          {{ item[index] }}
         </div>
         <hr />
       </template>

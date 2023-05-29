@@ -11,11 +11,7 @@ export default ({
         userinfo:{
             nickname: "",
             userId: "",
-            postTitle: [
-                {
-                    
-                }
-            ],
+            postTitle: [],
         },
     },
     actions: {
