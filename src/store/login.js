@@ -1,5 +1,6 @@
-import axios from "axios";
 import { router } from '../router.js'
+import jwt from "../common/jwt"
+import http from "../http"
 
 // state, getters, mutations, actions, modules
 export default ({
@@ -11,29 +12,28 @@ export default ({
         logininfo:{
             userId: "",
             password: "",
-            //loginresult: false,
         },
+        token: {
+            accessToken: jwt.getToken(),
+          }, // 토큰정보
+        isAuthenticated: !!jwt.getToken(),
     },
     actions: {
         async login(context) {
-            return axios
-              .post("http://localhost:3000/rest/api/login", context.state.logininfo)
-              .then((res) => {
-                router.push('/HomePageView');
-                console.log(res);
-                // if(res.data){
-                //     //context.commit('setResult',true)
-                //     router.push('/HomePageView');
-                //     console.log("로그인 성공입니다.");
-                // }else {
-                //     //context.commit('setResult',false)
-                //     console.log("로그인 실패입니다.");
-                // }
-                //console.log(context.state.logininfo.loginresult);
-              })
-              .catch(err => {
-                console.log(err);
-              });
+            return http
+                .post("http://localhost:3000/rest/api/login", context.state.logininfo)
+                .then((res) => {
+                    const { data } = res
+                    context.commit("login", {accessToken: data.accessToken})
+
+                    if (res.status == 200) {
+                        console.log(res);
+                        router.push("/HomePageView");
+                    }
+                })
+                .catch(err => {
+                    console.log(err);
+                });
           },
     },
     // 값을 변경시킬 수 있는 메서드
@@ -41,9 +41,12 @@ export default ({
         updateLoginInfo(state, logininfo){
             state.logininfo = logininfo;
         },
-        // setResult(state, loginresult){
-        //     state.logininfo.loginresult = loginresult
-        // }
+        login: function (state, payload = {}) {
+            state.token.accessToken = payload.accessToken
+            state.isAuthenticated = true
+            jwt.saveToken(payload.accessToken)
+            console.log("local storage token save suc!")
+        },
     },
     getters : {
         getLoginid: state => state.logininfo.id,
