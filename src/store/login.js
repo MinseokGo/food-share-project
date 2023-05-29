@@ -48,12 +48,14 @@ export default ({
           },
     },
     getters : {
-        getAccessToken: function (state) {
-            return state.token.accessToken
-        },
-        isAuthenticated: function (state) {
-            return state.isAuthenticated
-        },
+        getAccessToken: state => state.token.accessToken,
+        // getAccessToken: function (state) {
+        //     return state.token.accessToken
+        // },
+        isAuthenticated: state => state.isAuthenticated,
+        // isAuthenticated: function (state) {
+        //     return state.isAuthenticated
+        // },
         getLoginid: state => state.logininfo.id,
         getLoginpassword: state => state.logininfo.password,
         getL: state => state.logininfo,

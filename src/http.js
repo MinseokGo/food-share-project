@@ -9,9 +9,8 @@ const http = axios.create({
 http.interceptors.request.use(
   config => {
     const isAuthenticated = store.getters["isAuthenticated"]
-    if (isAuthenticated) {
-        //console.log("http.js:" + store.getters["getAccessToken"])
-        config.headers["Authorization"] = store.state.token.accessToken
+    if (isAuthenticated) {        
+        config.headers["Authorization"] = store.getters["getAccessToken"]
         //config.headers.Authorization = store.getters["getAccessToken"]
     }
     return config
