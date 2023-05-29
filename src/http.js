@@ -1,6 +1,6 @@
 import axios from "axios"
 import store from "./store/login.js"
-import jwt from "./common/jwt"
+// import jwt from "./common/jwt"
 
 const http = axios.create({
   baseURL: "http://localhost:3000",
