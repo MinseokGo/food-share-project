@@ -36,9 +36,9 @@ export default ({
             return http
                 .post("http://localhost:3000/rest/api/login", context.state.logininfo)
                 .then((res) => {
-                    const { data } = res
-                    context.commit("login", {accessToken: data.accessToken})
-                    console.log("login action" + data.accessToken);
+                    const { data } = res.data
+                    context.commit("login", {accessToken: data})
+                    console.log("login action" + data);
 
                     if (res.status == 200) {
                         console.log(res);
