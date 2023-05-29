@@ -13,7 +13,7 @@ export default ({
             userId: "",
             postTitle: [
                 {
-                  title: "",
+                    titles: "",
                 },
             ],
         },
