@@ -3,8 +3,10 @@ import store from "./store/login.js"
 // import jwt from "./common/jwt"
 
 const http = axios.create({
-  baseURL: "http://localhost:3000",
-  headers: { "content-type": "application/json" },
+    baseURL: "http://localhost:3000",
+    headers: { "content-type": "application/json",
+            "Authorization": ""
+    },
 })
 
 http.interceptors.request.use(
