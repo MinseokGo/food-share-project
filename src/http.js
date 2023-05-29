@@ -4,9 +4,7 @@ import login from "./store/login.js"
 
 const http = axios.create({
     baseURL: "http://localhost:3000",
-    headers: { "content-type": "application/json",
-        Authrozation: 'testToken',
-    },
+    headers: { "content-type": "application/json",},
 })
 
 http.interceptors.request.use(
@@ -15,7 +13,7 @@ http.interceptors.request.use(
 
     // console.log("is: " + store.getters["isAuthenticated"])
     if (isAuthenticated) {
-        console.log("get: " + login.state.isAuthenticated)
+        console.log("get: " + login.state.isAuthenticated + "Sadsda" + login.state.token.accessToken)
         //console.log("http.js:" + store.getters["getAccessToken"])
         config.headers["Authorization"] = login.state.token.accessToken
         //config.headers.Authorization = store.getters["getAccessToken"]
