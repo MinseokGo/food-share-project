@@ -1,4 +1,4 @@
-import axios from "axios";
+import http from "../http"
 
 // state, getters, mutations, actions, modules
 export default ({
@@ -18,7 +18,7 @@ export default ({
     },
     actions: {
         async writePost(context) {
-            return axios
+            return http
             .post('http://localhost:3000/rest/api/post', context.state.writepost)
             .then((res) => {
                 console.log(res);

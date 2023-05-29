@@ -1,4 +1,5 @@
-import axios from "axios";
+import http from "../http"
+
 
 // state, getters, mutations, actions, modules
 export default ({
@@ -8,13 +9,13 @@ export default ({
     // data
     state : { 
         userinfo:{
-            username: "준아",
-            userid: "junna1999",
+            username: "",
+            userid: "",
         },
     },
     actions: {
         async fetchUserInfo(context) {
-            return axios.get('http://localhost:3000/backend/api/auth/juna')
+            return http.get('http://localhost:3000/rest/api/home')
             .then((res) => {
                 console.log(res);
                 context.commit('setUser', res.data);

@@ -1,4 +1,4 @@
-import axios from "axios";
+import http from "../http"
 
 // state, getters, mutations, actions, modules
 export default ({
@@ -18,7 +18,7 @@ export default ({
     },
     actions: {
         async fetchUserInfo(context) {
-            return axios.post('http://localhost:3000/rest/api/pay')
+            return http.post('http://localhost:3000/rest/api/pay')
             .then((res) => {
                 console.log(res);
                 context.commit('setUser', res.data);

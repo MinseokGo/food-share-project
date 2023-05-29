@@ -1,4 +1,4 @@
-import axios from "axios";
+import http from "../http"
 
 // state, getters, mutations, actions, modules
 export default ({
@@ -16,7 +16,7 @@ export default ({
     },
     actions: {
         async fetchChatList(context) {
-            return axios.get('http://localhost:3000/rest/api/chatlist')
+            return http.get('http://localhost:3000/rest/api/chatlist')
             .then((res) => {
                 console.log(res);
                 context.commit('setUser', res.data);

@@ -31,7 +31,7 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-const { mapState, mapActions, mapGetters } = createNamespacedHelpers('homepage')
+const { mapState, mapActions } = createNamespacedHelpers('homepage')
 
 export default {
   name: "HomePageItem",
@@ -39,15 +39,17 @@ export default {
     ...mapState({
       itemlist: state => state.homeitem,
     }),
-    ...mapGetters(['getHomeItemList']),
-  },
   methods: {
-    ...mapActions(['fetchHomeItemList','viewPost']),
+    ...mapActions(['viewPost']),
   },
-  mounted() {
-    this.fetchHomeItemList();
-    this.getHomeItemList;
+    // ...mapGetters(['getHomeItemList']),
   },
+  // methods: {
+  //   ...mapActions(['fetchHomeItemList','viewPost']),
+  // },
+  // mounted() {
+  //   this.fetchHomeItemList();
+  // },
 };
 </script>
 

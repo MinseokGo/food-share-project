@@ -11,6 +11,8 @@ import HomePageNav from "/src/components/HomePageNav.vue";
 import HomePageSetLoc from "/src/components/HomePageSetLoc.vue";
 import HomePageItem from "/src/components/HomePageItem.vue";
 import HomePageWritePost from "/src/components/HomePageWritePost.vue";
+import { createNamespacedHelpers } from 'vuex'
+const { mapActions,  } = createNamespacedHelpers('homepage')
 
 export default {
   //name 속성은 없어도 보통의 동작에 이상 없음, 디버깅시 개발자도구에서 알아보기 쉬우려고 작성, 컴포넌트 구조가 재귀적일때에도 필요
@@ -20,6 +22,12 @@ export default {
     HomePageSetLoc,
     HomePageItem,
     HomePageWritePost,
+  },
+  methods: {
+    ...mapActions(['fetchHomeItemList']),
+  },
+  mounted() {
+    this.fetchHomeItemList();
   },
 };
 </script>

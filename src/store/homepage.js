@@ -48,7 +48,6 @@ export default ({
         }
     },
     getters : {
-        // getPostId: state => state.postId,
         getHomeItemList: state => state.homeitem,
     },
     modules: {
