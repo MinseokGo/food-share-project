@@ -40,8 +40,9 @@ export default ({
             });
         },
         async viewPost(context, p) {
+            console.log("포스트 아이디" + p)
             let data = {
-                postNum: p
+                postId: p
             }
             return http.post('http://localhost:3000/rest/api/view', data)
             .then((res) => {
