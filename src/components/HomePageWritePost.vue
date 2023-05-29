@@ -1,8 +1,11 @@
 <template>
-  <img src="../assets/home_writepost_icon_btn.png" @click="writepost">
+  <img src="../assets/home_writepost_icon_btn.png" @click="this.toWritePost">
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapActions } = createNamespacedHelpers('homepage')
+
 export default {
   name: "HomePageWritePost",
   data() {
@@ -12,10 +15,8 @@ export default {
     };
   },
   methods: {
-    writepost() {
-      this.$router.push('/WritePostView');
-    }
-  }
+    ...mapActions(['toWritePost']),
+  },
 };
 </script>
 

@@ -21,6 +21,18 @@ export default ({
         ],
     },
     actions: {
+        toHome() {
+            router.push('/HomePageView');
+        },
+        toChatList() {
+            router.push('/WritePostView');
+        },
+        toUserInfo() {
+            router.push('/WritePostView');
+        },
+        toWritePost() {
+            router.push('/WritePostView');
+        },
         async fetchHomeItemList(context) {
             return http.get('http://localhost:3000/rest/api/home')
             .then((res) => {
