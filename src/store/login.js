@@ -38,6 +38,7 @@ export default ({
                 .then((res) => {
                     const { data } = res
                     context.commit("login", {accessToken: data.accessToken})
+                    console.log("login action" + data.accessToken);
 
                     if (res.status == 200) {
                         console.log(res);
@@ -53,7 +54,7 @@ export default ({
         getAccessToken: function (state) {
             return state.token.accessToken
         },
-          isAuthenticated: function (state) {
+        isAuthenticated: function (state) {
             return state.isAuthenticated
         },
         getLoginid: state => state.logininfo.id,
