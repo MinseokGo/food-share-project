@@ -11,7 +11,7 @@ http.interceptors.request.use(
   config => {
     const isAuthenticated = login.state.isAuthenticated
     if (isAuthenticated) {
-        config.headers.Authrozation = login.state.token.accessToken
+        config.headers.Authorization = login.state.token.accessToken
     }
     return config
   },
