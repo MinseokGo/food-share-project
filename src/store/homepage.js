@@ -1,4 +1,4 @@
-import axios from "axios";
+import http from "../http"
 import { router } from '../router.js'
 import viewpost from './viewpost'
 
@@ -22,7 +22,7 @@ export default ({
     },
     actions: {
         async fetchHomeItemList(context) {
-            return axios.get('http://localhost:3000/rest/api/home')
+            return http.get('http://localhost:3000/rest/api/home')
             .then((res) => {
                 context.commit('setHomeItem', res.data);
             });
@@ -31,7 +31,7 @@ export default ({
             let data = {
                 postNum: p
             }
-            return axios.post('http://localhost:3000/rest/api/view', data)
+            return http.post('http://localhost:3000/rest/api/view', data)
             .then((res) => {
                 context.commit("viewpost/setViewPost", res.data);
                 router.push('/ViewPostView');
