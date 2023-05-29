@@ -11,6 +11,7 @@ http.interceptors.request.use(
     const isAuthenticated = store.getters["isAuthenticated"]
     if (isAuthenticated) {
       config.headers.common["Authorization"] = store.getters["getAccessToken"]
+      console.log("http.js" + store.getters["getAccessToken"])
     }
     return config
   },
