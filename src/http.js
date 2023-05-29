@@ -5,7 +5,7 @@ import login from "./store/login.js"
 const http = axios.create({
     baseURL: "http://localhost:3000",
     headers: { Authorization: "",
-    },
+},
 })
 
 http.interceptors.request.use(
@@ -21,6 +21,6 @@ http.interceptors.request.use(
         Promise.reject(error)
   }
 )
-http.defaults.headers.post["Content-Type"] = "application/json"
+http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded"
 
 export default http
