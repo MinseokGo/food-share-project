@@ -20,6 +20,5 @@ export default createStore({
     setloc,
     viewpost,
     writepost
-
   },
 })
