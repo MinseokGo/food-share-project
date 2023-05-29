@@ -15,7 +15,7 @@ export default ({
         },
         token: {
             accessToken: jwt.getToken(),
-          }, // 토큰정보
+        }, // 토큰정보
         isAuthenticated: !!jwt.getToken(),
     },
     // 값을 변경시킬 수 있는 메서드
