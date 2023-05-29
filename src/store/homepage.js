@@ -11,7 +11,7 @@ export default ({
     state : { 
         homeitem: [
             {
-                postNum: "",
+                postId: "",
                 title: "",
                 place: "",
                 time: "",
