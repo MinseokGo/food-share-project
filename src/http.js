@@ -12,7 +12,7 @@ http.interceptors.request.use(
     const isAuthenticated = store.getters["isAuthenticated"]
     if (isAuthenticated) {
         //console.log("http.js:" + store.getters["getAccessToken"])
-        config.headers["Authorization"] = `Bearer ${jwt.getToken()}`
+        config.headers["Authorization"] = "dssdasasdads"
         //config.headers.Authorization = store.getters["getAccessToken"]
     }
     return config
