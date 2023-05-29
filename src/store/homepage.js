@@ -25,10 +25,10 @@ export default ({
             router.push('/HomePageView');
         },
         toChatList() {
-            router.push('/WritePostView');
+            router.push('/ChatListView');
         },
         toUserInfo() {
-            router.push('/WritePostView');
+            router.push('/UserInfoView');
         },
         toWritePost() {
             router.push('/WritePostView');
