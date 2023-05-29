@@ -1,19 +1,38 @@
 <template>
   <div class="content_box">
     <div class="title_box">
-      <input type="text" placeholder="제목을 입력하세요">
+      <input type="text" placeholder="제목을 입력하세요" v-model="postinfo.title">
     </div>
     <hr>
     <div class="post_box">
-      <textarea placeholder="내용을 입력하세요"></textarea>
+      <textarea placeholder="내용을 입력하세요" v-model="postinfo.content"></textarea>
     </div>
     <hr>
   </div>
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapState, mapMutations} = createNamespacedHelpers('writepost')
+
 export default {
   name: "WritePostContent",
+  computed: {
+    postinfo: {
+      get() {
+        return this.pinfo;
+      },
+      set(value) {
+        this.updateWritePost(value);
+      }
+    },
+    ...mapState({
+      pinfo: state => state.writepost,
+    }),
+  },
+  methods: {
+    ...mapMutations(['updateWritePost']),
+  }
 };
 </script>
 

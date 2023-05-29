@@ -17,7 +17,6 @@ export default {
   },
   data() {
     return {
-      // loc:""
       loc: [
         { locname: "연산 석이네", locaddr: "연제구 신금로 44번길 01-01" },
         { locname: "서울 GD네", locaddr: "중구 중앙로 1번길 9-9" },

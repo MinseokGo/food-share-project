@@ -1,16 +1,17 @@
 <template>
   <div class="foot_box">
-    <div class="post_btn" @click="post()">게시하기</div>
+    <div class="post_btn" @click="this.writePost()">게시하기</div>
   </div>
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapActions } = createNamespacedHelpers('writepost')
+
 export default {
   name: "WritePostBtn",
   methods: {
-    post() {
-      this.$router.go(-1);
-    }
+    ...mapActions(['writePost']),
   }
 };
 </script>

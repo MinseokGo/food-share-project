@@ -2,19 +2,19 @@
   <div class="select_box">
     <div class="sel_line">
       <div class="sel_txt">공유 메뉴</div>
-      <input type="text" class="sel_option" placeholder="메뉴 선택" v-model="postinfo.userId"/>
+      <input type="text" class="sel_option" placeholder="메뉴 선택" v-model="postinfo.menu"/>
     </div>
     <div class="sel_line">
       <div class="sel_txt">공유 시간</div>
-      <input type="text" class="sel_option" placeholder="시간 선택" v-model="postinfo.userId"/>
+      <input type="text" class="sel_option" placeholder="시간 선택" v-model="postinfo.time"/>
     </div>
     <div class="sel_line">
       <div class="sel_txt">공유 장소</div>
-      <input type="text" class="sel_option" placeholder="장소 선택" v-model="postinfo.userId"/>
+      <input type="text" class="sel_option" placeholder="장소 선택" v-model="postinfo.place"/>
     </div>
     <div class="sel_line">
       <div class="sel_txt">희망 공유 인원</div>
-      <input type="text" class="sel_option" placeholder="인원 선택" v-model="postinfo.userId"/>
+      <input type="text" class="sel_option" placeholder="인원 선택" v-model="postinfo.people"/>
     </div>
     <div class="sel_line"></div>
   </div>
@@ -22,7 +22,7 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-const { mapState, mapActions, mapMutations} = createNamespacedHelpers('writepost')
+const { mapState, mapMutations} = createNamespacedHelpers('writepost')
 
 export default {
   name: "WritePostSelect",
@@ -32,16 +32,15 @@ export default {
         return this.pinfo;
       },
       set(value) {
-        this.updateLoginInfo(value);
+        this.updateWritePost(value);
       }
     },
     ...mapState({
-      pinfo: state => state.postinfo,
+      pinfo: state => state.writepost,
     }),
   },
   methods: {
-    ...mapActions(['writePost']),
-    ...mapMutations(['updateLoginInfo']),
+    ...mapMutations(['updateWritePost']),
   }
 };
 </script>
@@ -68,9 +67,10 @@ export default {
 }
 
 .sel_option {
-  width: 75%;
-  height: 100%;
-  line-height: 325%;
+  position: relative;
+  top: 20%;
+  width: 70%;
+  height: 50%;
   float: left;
   color: #F0F0F0;
 }

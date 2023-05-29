@@ -1,5 +1,5 @@
 <template>
-  <img src="../assets/home_writepost_icon_btn.png" @click="this.toWritePost">
+  <img src="../assets/home_writepost_icon_btn.png" @click="this.toWritePost()">
 </template>
 
 <script>
@@ -8,12 +8,6 @@ const { mapActions } = createNamespacedHelpers('homepage')
 
 export default {
   name: "HomePageWritePost",
-  data() {
-    return {
-      loc: "금정구 자취방"
-      
-    };
-  },
   methods: {
     ...mapActions(['toWritePost']),
   },

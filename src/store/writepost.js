@@ -21,15 +21,15 @@ export default ({
             return http
             .post('http://localhost:3000/rest/api/post', context.state.writepost)
             .then((res) => {
+                console.log(context.state.writepost);
                 console.log(res);
-                context.commit('setUser', res.data);
             });
         }
     },
     // 값을 변경시킬 수 있는 메서드
     mutations: {
-        setUser(state, userinfo){
-            state.userinfo = userinfo;
+        updateWritePost(state, writepost){
+            state.writepost = writepost;
         }
     },
     getters : {

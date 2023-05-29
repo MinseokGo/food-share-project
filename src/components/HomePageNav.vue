@@ -1,14 +1,14 @@
 <template>
   <div class="nav">
-    <div class="home_btn" @click="home">
+    <div class="home_btn" @click="this.toHome()">
       <img src="@/assets/home_home_icon_btn.png" class="nav_img" />
       <div class="nav_text">홈</div>
     </div>
-    <div class="chat_btn" @click="chatlist">
+    <div class="chat_btn" @click="this.toChatList()">
       <img src="@/assets/home_chat_icon_btn.png" class="nav_img" />
       <div class="nav_text">채팅</div>
     </div>
-    <div class="info_btn" @click="info">
+    <div class="info_btn" @click="this.toUserInfo()">
       <img src="@/assets/home_userinfo_icon_btn.png" class="nav_img" />
       <div class="nav_text">내정보</div>
     </div>
@@ -16,18 +16,13 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapActions } = createNamespacedHelpers('homepage')
+
 export default {
   name: "HomePageNav",
   methods: {
-    home() {
-      this.$router.push('/HomePageView');
-    },
-    chatlist() {
-      this.$router.push('/ChatListView');
-    },
-    info() {
-      this.$router.push('/UserInfoView');
-    }
+    ...mapActions(['toHome', 'toChatList', 'toUserInfo']),
   },
 };
 </script>
