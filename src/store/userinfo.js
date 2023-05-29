@@ -9,13 +9,18 @@ export default ({
     // data
     state : { 
         userinfo:{
-            username: "",
-            userid: "",
+            nickname: "",
+            userId: "",
+            postTitle: [
+                {
+                  title: "",
+                },
+            ],
         },
     },
     actions: {
         async fetchUserInfo(context) {
-            return http.get('http://localhost:3000/rest/api/home')
+            return http.get('http://localhost:3000/rest/api/user')
             .then((res) => {
                 console.log(res);
                 context.commit('setUser', res.data);
@@ -29,7 +34,6 @@ export default ({
         }
     },
     getters : {
-        getUsername: state => state.userinfo.username,
-        getUserid: state => state.userinfo.userid,
+        getUserObj: state => state.userinfo,
     },
 });

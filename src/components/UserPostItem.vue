@@ -14,23 +14,31 @@
 </template>
 
 <script>
+import { createNamespacedHelpers } from 'vuex'
+const { mapState } = createNamespacedHelpers('userinfo')
+
 export default {
   name: "UserPostItem",
-  data() {
-    return {
-      list: [
-        {
-          title: "자메이카 한주디 하실분",
-        },
-        {
-          title: "후라이드 노나묵자!",
-        },
-        {
-          title: "응애!",
-        },
-      ],
-    };
+  computed: {
+    ...mapState({
+      list: state => state.userinfo.postTitle
+    }),
   },
+  // data() {
+  //   return {
+  //     list: [
+  //       {
+  //         title: "자메이카 한주디 하실분",
+  //       },
+  //       {
+  //         title: "후라이드 노나묵자!",
+  //       },
+  //       {
+  //         title: "응애!",
+  //       },
+  //     ],
+  //   };
+  // },
 };
 </script>
 
