@@ -4,7 +4,7 @@ import login from "./store/login.js"
 
 const http = axios.create({
     baseURL: "http://localhost:3000",
-    headers: { "content-type": "application/json",
+    headers: { "Content-Type": "application/json",
     Authorization: "",
 },
 })
