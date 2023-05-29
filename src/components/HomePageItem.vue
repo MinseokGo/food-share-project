@@ -39,17 +39,13 @@ export default {
     ...mapState({
       itemlist: state => state.homeitem,
     }),
+  },
   methods: {
-    ...mapActions(['viewPost']),
+    ...mapActions(['fetchHomeItemList', 'viewPost']),
   },
-    // ...mapGetters(['getHomeItemList']),
+  mounted() {
+    this.fetchHomeItemList();
   },
-  // methods: {
-  //   ...mapActions(['fetchHomeItemList','viewPost']),
-  // },
-  // mounted() {
-  //   this.fetchHomeItemList();
-  // },
 };
 </script>
 
