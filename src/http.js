@@ -1,5 +1,5 @@
 import axios from "axios"
-import store from "./store/index.js"
+import store from "./store/login.js"
 // import jwt from "./common/jwt"
 
 const http = axios.create({
@@ -9,7 +9,9 @@ const http = axios.create({
 
 http.interceptors.request.use(
   config => {
-    const isAuthenticated = store.login.getters["isAuthenticated"]
+    const isAuthenticated = store.getters["isAuthenticated"]
+    console.log("get: " + store.login.getters["getAccessToken"])
+
     // console.log("is: " + store.getters["isAuthenticated"])
     if (isAuthenticated) {
         console.log("get: " + store.login.getters["getAccessToken"])
