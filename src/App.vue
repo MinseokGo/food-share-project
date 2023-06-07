@@ -15,7 +15,7 @@ export default {
 body {
     width: 100%;
     height: 100%;
-    background-color: #E2E2E2;
+    background-color: gray;
 }
 
 .outside_box {

@@ -22,7 +22,7 @@
               </div>
             </div>
           </div>
-          <hr/>
+          <hr/> 
         </li>
       </template>
     </ul>
